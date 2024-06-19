@@ -1,0 +1,21 @@
+<div class="container-fluid d-flex justify-content-center px-5 m-0 mt-5 mb-5">
+    <div class="form-container col-3">
+        <div class="text-center mb-5">
+            <h1>Login</h1>
+            <p>Inserisci la tua email e la password:</p>
+        </div>
+        <form>
+            <div class="mb-3">
+                <input type="email" class="form-control rounded-0 py-2" id="email" placeholder="E-mail" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control rounded-0 py-2" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn colore text-white  w-100 rounded-0">LOGIN</button>
+        </form>
+        <div class="text-center p-4">
+            <span>Nuovo cliente? <a class="text-black-50 active" [routerLink]="['/signup']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Crea un account</a></span>
+        </div>
+    </div>
+</div>
+

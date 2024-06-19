@@ -1,0 +1,28 @@
+<div class="container-fluid d-flex justify-content-center px-5 m-0 mt-5 mb-5">
+    <div class="form-container col-3">
+        <div class="text-center mb-5">
+            <h1>Sign-Up</h1>
+            <p>Compila i seguenti campi:</p>
+        </div>
+        <form>
+            <div class="mb-3 ">
+                <input type="text" class="form-control rounded-0 py-2" id="name" name="name" placeholder="Nome" required >
+            </div>
+            <div class="mb-3 ">
+                <input type="text" class="form-control rounded-0 py-2" id="surname" name="surname" placeholder="Cognome" required >
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control rounded-0 py-2" id="email" placeholder="E-mail" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control rounded-0 py-2" id="password" placeholder="Password"
+                    required>
+            </div>
+            <button type="submit" class="btn colore text-white  w-100 rounded-0">CREA ACCOUNT</button>
+        </form>
+        <div class="text-center p-4">
+            <span>Hai già un account? <a class="text-black-50 active" [routerLink]="['/login']"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</a></span>
+        </div>
+    </div>
+</div>

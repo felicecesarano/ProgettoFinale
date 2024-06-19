@@ -1,0 +1,28 @@
+.banner{
+    background-image: url(../../../assets/Bundesliga.png);
+    padding: 190px;
+    background-size: cover;
+}
+.card-img-top-container {
+    position: relative;
+    overflow: hidden; /* Per assicurarsi che il pulsante non esca dai bordi dell'immagine */
+  }
+  .card-img-top-container img {
+    display: block;
+    width: 100%;
+  }
+  .card-img-top-container .btn {
+    position: absolute;
+    bottom: -50px; /* Nascondi inizialmente il pulsante fuori dalla vista */
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    transition: bottom 0.3s; /* Aggiungi una transizione di 0.3s */
+  }
+  .card-img-top-container:hover .btn {
+    bottom: 10px; /* Mostra il pulsante in basso con una transizione */
+  }
+  
+  .bgButton{
+    background-color: #F65D21;
+  }
