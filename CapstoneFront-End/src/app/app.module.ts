@@ -25,6 +25,7 @@ import { CatalogueLigue1Component } from './components/catalogue-ligue1/catalogu
 import { CatalogueLaLigaComponent } from './components/catalogue-la-liga/catalogue-la-liga.component';
 import { CatalogueBundesligaComponent } from './components/catalogue-bundesliga/catalogue-bundesliga.component';
 import { CatalogueRetroComponent } from './components/catalogue-retro/catalogue-retro.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 const routes: Route[] = [
@@ -86,7 +87,8 @@ const routes: Route[] = [
     CatalogueLigue1Component,
     CatalogueLaLigaComponent,
     CatalogueBundesligaComponent,
-    CatalogueRetroComponent
+    CatalogueRetroComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

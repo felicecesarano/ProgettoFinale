@@ -1,19 +1,37 @@
 i {
-    font-size: 1.3rem;
-    
+  font-size: 1.3rem;
+
 }
 
 
-.container-fluid{
-    background-color: rgba(255, 255, 255, 0.281);
+.container-fluid {
+  background-color: rgba(255, 255, 255, 0.281);
 }
 
 
 .w-25 {
-    transition: all 0.3s ease; 
+  transition: all 0.3s ease;
+}
+
+.scrolled .w-25 {
+  width: 15% !important;
+}
+
+.bgButton {
+  background-color: #F65D21;
+}
+
+@media (max-width: 768px) {
+  i {
+
+font-size: 1.2rem;
   }
   
-  .scrolled .w-25 {
-    width: 15% !important; 
+}
+@media (max-width: 576px) {
+  i {
+
+font-size: 1rem;
   }
   
+}

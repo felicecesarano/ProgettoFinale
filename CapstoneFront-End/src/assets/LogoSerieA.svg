@@ -1,0 +1,47 @@
+<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 125 155">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #262553;
+      }
+
+      .cls-2 {
+        fill: url(#Sfumatura_senza_nome_3);
+      }
+
+      .cls-3 {
+        fill: url(#Sfumatura_senza_nome_2);
+      }
+    </style>
+    <linearGradient id="Sfumatura_senza_nome_3" data-name="Sfumatura senza nome 3" x1="29.68" y1="198.65" x2="82" y2="198.65" gradientTransform="matrix(0.93, 0, 0, -0.93, 10.75, 314.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6fc8e2"/>
+      <stop offset="0.05" stop-color="#65c6e6"/>
+      <stop offset="0.3" stop-color="#48aae0"/>
+      <stop offset="0.51" stop-color="#4384c5"/>
+      <stop offset="0.69" stop-color="#396fb6"/>
+      <stop offset="0.81" stop-color="#3869b1"/>
+    </linearGradient>
+    <linearGradient id="Sfumatura_senza_nome_2" data-name="Sfumatura senza nome 2" x1="94.61" y1="326.47" x2="47.98" y2="198.34" gradientTransform="matrix(0.93, 0, 0, -0.93, 10.75, 314.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6fc8e2"/>
+      <stop offset="0.05" stop-color="#65c6e6"/>
+      <stop offset="0.29" stop-color="#48aae0"/>
+      <stop offset="0.51" stop-color="#4384c5"/>
+      <stop offset="0.69" stop-color="#396fb6"/>
+      <stop offset="0.8" stop-color="#3869b1"/>
+    </linearGradient>
+  </defs>
+  <title>loghi</title>
+  <g id="g915">
+    <g id="g898">
+      <g id="g896">
+        <g id="g894">
+          <polygon id="polygon873" class="cls-1" points="0 110.4 38.2 110.4 62.5 150 0 110.4"/>
+          <polygon id="polygon875" class="cls-1" points="125 110.4 86.7 110.4 62.5 150 125 110.4"/>
+          <polygon id="polygon877" class="cls-1" points="38.2 110.4 62.5 110.4 86.7 110.4 62.5 46.4 38.2 110.4"/>
+          <polygon id="polygon892" class="cls-2" points="62.5 150 86.7 110.4 38.2 110.4 62.5 150"/>
+        </g>
+      </g>
+    </g>
+    <path id="path913" class="cls-3" d="M62.5,46.4,72.9,74H59.7L50.8,97.8H82l4.7,12.6H125L79.7,5H45.2L0,110.4H38.3Z"/>
+  </g>
+</svg>

@@ -87,3 +87,21 @@
   ::placeholder {
     color: rgba(255, 255, 255, 0.541);
   }
+
+  @media (max-width: 768px) {
+   
+    h6{
+        font-size: 0.8rem;
+    }
+    p, a{
+        font-size: 0.7rem;
+    }
+    .socail-media li a{
+      width: 30px;
+      height: 30px;
+    }
+    .socail-media li a svg{
+      width: 15px;
+      height: 15px;
+    }
+      }

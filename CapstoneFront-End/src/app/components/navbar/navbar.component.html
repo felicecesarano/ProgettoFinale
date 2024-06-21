@@ -1,7 +1,7 @@
-<div class="container-fluid px-5 border-bottom d-flex align-items-center justify-content-between bg-white"
+<div class="container-fluid px-lg-5  px-md-1 border-bottom d-flex align-items-center justify-content-between bg-white"
     [ngClass]="{'scrolled': scrolled}">
     <div>
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+        <button class="btn p-sm-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
             aria-controls="staticBackdrop">
             <i class="bi bi-list"></i>
         </button>
@@ -18,17 +18,31 @@
                             <li class="list-group-item fs-4 ps-0"><a [routerLink]="['/']" routerLinkActive="active"
                                     [routerLinkActiveOptions]="{exact: true}" class="nav-link active text-black"
                                     data-bs-dismiss="offcanvas">Home</a></li>
-                            <li class="list-group-item fs-4 ps-0"><a [routerLink]="['/serie-a']"
-                                    class="nav-link active text-black" data-bs-dismiss="offcanvas">Serie A</a></li>
-                            <li class="list-group-item fs-4 ps-0"><a [routerLink]="['/premierleague']"
-                                    class="nav-link active text-black" data-bs-dismiss="offcanvas">Premier League</a>
+                            <li class="list-group-item fs-4 ps-0 d-flex justify-content-between"><a
+                                    [routerLink]="['/serie-a']" class="nav-link active text-black"
+                                    data-bs-dismiss="offcanvas">Serie A</a>
+                                <img src="../../../assets/LogoSerieA.svg" alt="SerieA" width="10%">
                             </li>
-                            <li class="list-group-item fs-4 ps-0"><a [routerLink]="['/ligue1']"
-                                    class="nav-link active text-black" data-bs-dismiss="offcanvas">Ligue 1</a></li>
-                            <li class="list-group-item fs-4 ps-0"><a [routerLink]="['/laliga']"
-                                    class="nav-link active text-black" data-bs-dismiss="offcanvas">La Liga</a></li>
-                            <li class="list-group-item fs-4 ps-0"><a [routerLink]="['/bundesliga']"
-                                    class="nav-link active text-black" data-bs-dismiss="offcanvas">Bundesliga</a></li>
+                            <li class="list-group-item fs-4 ps-0 d-flex justify-content-between"><a
+                                    [routerLink]="['/premierleague']" class="nav-link active text-black"
+                                    data-bs-dismiss="offcanvas">Premier League</a>
+                                <img src="../../../assets/LogoPremierLeague.svg" alt="PremierLeague" width="10%">
+                            </li>
+                            <li class="list-group-item fs-4 ps-0 d-flex justify-content-between"><a
+                                    [routerLink]="['/ligue1']" class="nav-link active text-black"
+                                    data-bs-dismiss="offcanvas">Ligue 1</a>
+                                <img src="../../../assets/LogoLigue1.svg" alt="Ligue1" width="10%">
+                            </li>
+                            <li class="list-group-item fs-4 ps-0 d-flex justify-content-between"><a
+                                    [routerLink]="['/laliga']" class="nav-link active text-black"
+                                    data-bs-dismiss="offcanvas">La Liga</a>
+                                <img src="../../../assets/LogoLaLiga.svg" alt="LaLiga" width="10%">
+                            </li>
+                            <li class="list-group-item fs-4 ps-0 d-flex justify-content-between"><a
+                                    [routerLink]="['/bundesliga']" class="nav-link active text-black"
+                                    data-bs-dismiss="offcanvas">Bundesliga</a>
+                                <img src="../../../assets/LogoBundesliga.svg" alt="Bundesliga" width="10%">
+                            </li>
                             <li class="list-group-item fs-4 ps-0"><a [routerLink]="['/retro']"
                                     class="nav-link active text-black" data-bs-dismiss="offcanvas">Retrò</a></li>
                             <li class="list-group-item fs-4 ps-0"><a [routerLink]="['/restodelmondo']"
@@ -45,38 +59,47 @@
         </div>
     </div>
     <div class="text-center">
-        <a href=""><img src="../../../assets/Logo.jpg" alt="Logo" class="ms-5 w-25"></a>
+        <a href=""><img src="../../../assets/Logo.jpg" alt="Logo" class="ms-lg-5 w-25 ms-sm-0 me-sm-3 me-md-0 ms-md-4"></a>
     </div>
-    <div>
+    <div class="d-sm-flex flex-sm-column flex-md-row">
         <i class="bi bi-search"></i>
-        <i class="bi bi-person mx-3"></i>
+        <i class="bi bi-person mx-lg-3  mx-md-2  "></i>
         <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
             class="bi bi-bag"></i>
     </div>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header border-bottom">
-        <i class="bi bi-bag "></i> <span class="ms-2"> 1 Articolo</span>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="card m-2" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                    class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="card-text"><small class="text-body-secondary">BOCA JUNIORS</small></p>
-                        <p class="card-text fw-semibold">35€</p>
+<div class="offcanvas offcanvas-end justify-content-between d-flex" tabindex="-1" id="offcanvasRight"
+    aria-labelledby="offcanvasRightLabel">
+    <div>
+        <div class="offcanvas-header border-bottom">
+            <i class="bi bi-bag "></i> <span class="ms-2"> 1 Articolo</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="card mx-4 my-2" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-sm-4 d-flex align-items-center">
+                    <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-sm-8">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text"><small class="text-body-secondary">BOCA JUNIORS</small></p>
+                            <p class="card-text fw-semibold">35€</p>
+                        </div>
+                        <h6 class="card-text">Shirt Player Boca Juniors 96/97</h6>
+                        <p class="card-text m-0"><small class="text-body-secondary">L</small></p>
+                        <i class="bi bi-trash3 float-end text-danger"></i>
                     </div>
-                    <h6 class="card-text">Shirt Player Boca Juniors 96/97</h6>
-                    <p class="card-text"><small class="text-body-secondary">L</small></p>
-                    <i class="bi bi-trash3 float-end text-danger"></i>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="border-top p-4">
+        <div class="d-flex align-items-center justify-content-center text-white bgButton p-2">
+            <i class="bi bi-lock"></i>
+            <p class="m-0 ms-4">CHECKOUT - €35,00 EUR</p>
         </div>
     </div>
 </div>

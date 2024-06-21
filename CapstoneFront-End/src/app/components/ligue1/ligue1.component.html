@@ -1,9 +1,9 @@
-<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom3"
     aria-controls="offcanvasBottom">
-    <img src="https://upload.wikimedia.org/wikipedia/it/6/6d/Premier_League_Logo_2016.png" alt="PremierLeague">
+    <img src="../../../assets/LogoLigue1.svg" alt="Ligue1" class="w-50">
 </button>
 
-<div class="offcanvas offcanvas-bottom px-5 flex-row align-items-center" tabindex="-1" id="offcanvasBottom"
+<div class="offcanvas offcanvas-bottom px-5 flex-row align-items-center" tabindex="-1" id="offcanvasBottom3"
     aria-labelledby="offcanvasBottomLabel">
     <div class="offcanvas-body d-flex">
         <div class=" p-3 ps-0">
@@ -75,9 +75,9 @@
                 <button type="button" class="btn mb-4 bgButton text-white p-1 mt-2">Aggiungi al carrello</button>
             </div>
         </div>
-        <div class="d-flex flex-column justify-content-center col-1">
-        
-            <button type="button" class="btn bgButton text-white p-1">Catalogo Serie A</button>
-        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center col-1">
+            <img src="../../../assets/LogoLigue1.svg" alt="Ligue1" class="w-75">
+            <button type="button" class="btn bgButton text-white p-1" [routerLink]="['/ligue1']">Catalogo Ligue1</button>
+        </div>>
     </div>
 </div>
