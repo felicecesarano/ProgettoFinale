@@ -26,6 +26,9 @@ import { CatalogueLaLigaComponent } from './components/catalogue-la-liga/catalog
 import { CatalogueBundesligaComponent } from './components/catalogue-bundesliga/catalogue-bundesliga.component';
 import { CatalogueRetroComponent } from './components/catalogue-retro/catalogue-retro.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { TokenInterceptor } from './auth/token.interceptor';
+import { AuthService } from './auth/auth.service';
+import { AccountComponent } from './components/account/account.component';
 
 
 const routes: Route[] = [
@@ -65,6 +68,10 @@ const routes: Route[] = [
     path: 'retro',
     component: CatalogueRetroComponent,
   },
+  {
+    path: 'account',
+    component: AccountComponent,
+  },
 ]
 @NgModule({
   declarations: [
@@ -88,14 +95,23 @@ const routes: Route[] = [
     CatalogueLaLigaComponent,
     CatalogueBundesligaComponent,
     CatalogueRetroComponent,
-    CarouselComponent
+    CarouselComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService, {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

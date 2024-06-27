@@ -1,8 +1,3 @@
-.banner{
-    background-image: url(../../../assets/retro.jpg);
-    background-size: cover;
-    padding: 250px;
-}
 .card-img-top-container {
   position: relative;
   overflow: hidden;
@@ -26,7 +21,7 @@
   bottom: 10px;
 }
 
-.bgButton {
+.bgButton, .taglia-btn.selected {
   background-color: #F65D21;
 }
 

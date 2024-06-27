@@ -4,12 +4,12 @@
             <h1>Login</h1>
             <p>Inserisci la tua email e la password:</p>
         </div>
-        <form>
+        <form (ngSubmit)="login()">
             <div class="mb-3">
-                <input type="email" class="form-control rounded-0 py-2" id="email" placeholder="E-mail" required>
+                <input type="email" class="form-control rounded-0 py-2" id="email" name="email" placeholder="E-mail" [(ngModel)]="log.email" required>
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control rounded-0 py-2" id="password" placeholder="Password" required>
+                <input type="password" class="form-control rounded-0 py-2" id="password" name="password" placeholder="Password" [(ngModel)]="log.password" required>
             </div>
             <button type="submit" class="btn colore text-white  w-100 rounded-0">LOGIN</button>
         </form>

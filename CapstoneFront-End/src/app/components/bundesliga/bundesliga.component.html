@@ -1,83 +1,54 @@
-<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom5"
+<button class="btn p-0 m-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom5"
     aria-controls="offcanvasBottom">
-    <img src="../../../assets/LogoBundesliga.svg" alt="Bundesliga" class="w-50">
+    <img src="../../../assets/LogoBundesliga.svg" alt="SerieA" class="w-50">
 </button>
 
-<div class="offcanvas offcanvas-bottom px-5 flex-row align-items-center" tabindex="-1" id="offcanvasBottom5"
+<div class="offcanvas offcanvas-bottom px-lg-5 px-sm-1 flex-row align-items-center" tabindex="-1" id="offcanvasBottom5"
     aria-labelledby="offcanvasBottomLabel">
     <div class="offcanvas-body d-flex">
-        <div class=" p-3 ps-0">
-            <div class="card border-0" style="width: 11rem;">
-                <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                    class="card-img-top rounded-5" alt="Boca Retro">
+        <div class="p-3 ps-0" *ngFor="let product of randomProducts; let i = index">
+            <div class="card border-0"
+                 style="width: 11rem;"
+                 *ngIf="(i < 5 && isLargeScreen()) || (i < 4 && isMediumScreen()) || (i < 3 && isSmallScreen()) || (i < 2 && isExtraSmallScreen())"
+                 [ngClass]="{'selected': isSelectedProduct(product)}"
+                 (click)="selectProduct(product)">
+                <img [src]="product.img" class="card-img-top rounded-5" [alt]="product.name">
                 <div class="card-body text-center text-black">
-                    <h6 class="card-text">BOCA JUNIORS</h6>
+                    <h6 class="card-text">{{ product.name }}</h6>
                 </div>
             </div>
         </div>
-        <div class=" p-3">
-            <div class="card border-0" style="width: 11rem;">
-                <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                    class="card-img-top rounded-5" alt="Boca Retro">
-                <div class="card-body text-center text-black">
-                    <h6 class="card-text">BOCA JUNIORS</h6>
-                </div>
-            </div>
-        </div>
-        <div class=" p-3">
-            <div class="card border-0" style="width: 11rem;">
-                <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                    class="card-img-top rounded-5" alt="Boca Retro">
-                <div class="card-body text-center text-black">
-                    <h6 class="card-text">BOCA JUNIORS</h6>
-                </div>
-            </div>
-        </div>
-        <div class=" p-3">
-            <div class="card border-0" style="width: 11rem;">
-                <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                    class="card-img-top rounded-5" alt="Boca Retro">
-                <div class="card-body text-center text-black">
-                    <h6 class="card-text">BOCA JUNIORS</h6>
-                </div>
-            </div>
-        </div>
-        <div class=" p-3">
-            <div class="card border-0" style="width: 11rem;">
-                <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                    class="card-img-top rounded-5" alt="Boca Retro">
-                <div class="card-body text-center text-black">
-                    <h6 class="card-text">BOCA JUNIORS</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-2 offset-1 mt-2">
+        <div class="col-2 offset-xxl-1 mt-2">
             <div>
                 <h6>Taglie Disponibili</h6>
-                <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                    data-taglia="S">S</button>
-                <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                    data-taglia="M">M</button>
-                <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                    data-taglia="L">L</button>
-                <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                    data-taglia="XL">XL</button>
-                <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                    data-taglia="XXL">XXL</button>
+                <button type="button" class="btn btn-outline-secondary taglia-btn me-xl-3 me-sm-2 px-xxl-4  px-sm-2 mb-2"
+                    (click)="selectSize('S')" [class.active]="selectedSize === 'S'">S</button>
+                <button type="button" class="btn btn-outline-secondary taglia-btn me-xl-3 me-sm-2 px-xxl-4 mb-2  px-sm-2"
+                    (click)="selectSize('M')" [class.active]="selectedSize === 'M'">M</button>
+                <button type="button" class="btn btn-outline-secondary taglia-btn me-xl-3 me-sm-2 px-xxl-4 mb-2  px-sm-2"
+                    (click)="selectSize('L')" [class.active]="selectedSize === 'L'">L</button>
+                <button type="button" class="btn btn-outline-secondary taglia-btn me-xl-3 me-sm-2 px-xxl-4 mb-2  px-sm-2"
+                    (click)="selectSize('XL')" [class.active]="selectedSize === 'XL'">XL</button>
+                <button type="button" class="btn btn-outline-secondary taglia-btn me-xl-3 me-sm-2 px-xxl-4 mb-2  px-sm-2"
+                    (click)="selectSize('XXL')" [class.active]="selectedSize === 'XXL'">XXL</button>
             </div>
-            <div class="col-6">
+            <div class="col-xl-6 col-md-7 col-md-6 col-sm-8">
                 <h6>Quantità:</h6>
                 <div class="input-group">
-                    <button class="btn btn-outline-secondary" type="button" id="minusBtn">-</button>
-                    <input type="number" class="form-control text-center " id="quantita" value="1" min="1">
-                    <button class="btn btn-outline-secondary" type="button" id="plusBtn">+</button>
+                    <button class="btn btn-outline-secondary" type="button" id="minusBtn" (click)="decrementQuantity()"
+                        [disabled]="quantity === 1">-</button>
+                    <input type="number" class="form-control text-center" id="quantita" [(ngModel)]="quantity" min="1">
+                    <button class="btn btn-outline-secondary" type="button" id="plusBtn"
+                        (click)="incrementQuantity()">+</button>
                 </div>
-                <button type="button" class="btn mb-4 bgButton text-white p-1 mt-2">Aggiungi al carrello</button>
+                <button type="button" class="btn mb-4 bgButton text-white p-1 mt-xl-2 mt-lg-3 mt-md-4 mt-sm-2" (click)="addToCart()">Aggiungi al
+                    carrello</button>
             </div>
         </div>
-        <div class="d-flex flex-column align-items-center justify-content-center col-1">
-            <img src="../../../assets/LogoBundesliga.svg" alt="Bundesliga" class="w-75">
-            <button type="button" class="btn bgButton text-white py-0" [routerLink]="['/bundesliga']">Catalogo Bundesliga</button>
+        <div class="d-flex flex-column align-items-center justify-content-center col-1 ms-md-4 ms-sm-4">
+            <img src="../../../assets/LogoBundesliga.svg" alt="SerieA" class="w-75">
+            <button type="button" class="btn bgButton text-white p-1 mt-lg-1 mt-xl-0 mt-md-2 mt-sm-1" [routerLink]="['/serie-a']">Catalogo Serie
+                A</button>
         </div>
     </div>
 </div>

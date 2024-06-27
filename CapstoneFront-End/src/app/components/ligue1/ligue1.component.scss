@@ -1,3 +1,52 @@
-.bgButton{
-    background-color: #F65D21;
+.bgButton, .taglia-btn.active{
+  background-color: #F65D21;
+}
+
+.selected {
+  box-shadow: 0 0 10px  #F65D21; 
+}
+
+@media (max-width: 1200px) {
+  div .card {
+    width: 7.9rem !important;
   }
+div .col-2 {
+width: 25% !important;
+}
+
+div .col-md-7 button, div .col-1 button{
+  font-size: 0.9rem;
+} 
+}
+
+@media (max-width: 992px) {
+  div .card {
+    width: 7.9rem !important;
+  }
+div .col-2 {
+width: 25% !important;
+}
+
+div .col-md-7 button, div .col-1 button{
+  font-size: 0.8rem;
+
+} 
+input{
+  padding: 0;
+}
+.taglia-btn{
+  font-size: 0.8rem;
+}
+}
+
+@media (max-width: 768px) {
+  div .card {
+    width: 8rem !important;
+  }
+  div .col-md-7 button, div .col-1 button{
+     font-size: 0.7rem;
+  }
+  .taglia-btn{
+     font-size: 0.7rem;
+  }  
+}

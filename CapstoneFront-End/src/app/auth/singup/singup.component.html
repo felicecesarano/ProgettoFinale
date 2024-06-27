@@ -4,25 +4,23 @@
             <h1>Registrati</h1>
             <p>Compila i seguenti campi:</p>
         </div>
-        <form>
-            <div class="mb-3 ">
-                <input type="text" class="form-control rounded-0 py-2" id="name" name="name" placeholder="Nome" required >
-            </div>
-            <div class="mb-3 ">
-                <input type="text" class="form-control rounded-0 py-2" id="surname" name="surname" placeholder="Cognome" required >
+        <form (ngSubmit)="signup()">
+            <div class="mb-3">
+                <input type="text" class="form-control rounded-0 py-2" id="nome" name="nome" placeholder="Nome" [(ngModel)]="sign.nome" required>
             </div>
             <div class="mb-3">
-                <input type="email" class="form-control rounded-0 py-2" id="email" placeholder="E-mail" required>
+                <input type="text" class="form-control rounded-0 py-2" id="cognome" name="cognome" placeholder="Cognome" [(ngModel)]="sign.cognome" required>
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control rounded-0 py-2" id="password" placeholder="Password"
-                    required>
+                <input type="email" class="form-control rounded-0 py-2" id="email" name="email" placeholder="E-mail" [(ngModel)]="sign.email" required>
             </div>
-            <button type="submit" class="btn colore text-white  w-100 rounded-0">CREA ACCOUNT</button>
+            <div class="mb-3">
+                <input type="password" class="form-control rounded-0 py-2" id="password" name="password" placeholder="Password" [(ngModel)]="sign.password" required>
+            </div>
+            <button type="submit" class="btn colore text-white w-100 rounded-0">CREA ACCOUNT</button>
         </form>
         <div class="text-center p-4">
-            <span>Hai già un account? <a class="text-black-50 active" [routerLink]="['/login']"
-                    routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</a></span>
+            <span>Hai già un account? <a class="text-black-50 active" [routerLink]="['/login']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</a></span>
         </div>
     </div>
 </div>

@@ -1,0 +1,129 @@
+[
+    {
+        "name": "Atalanta",
+        "description": "Shirt Player Atalanta Home 23/24",
+        "img": "https://store.atalanta.it/images/atalanta/products/large/AT23D01.webp",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Atalanta",
+        "description": "Shirt Player Atalanta Away 23/24",
+        "img": "https://store.atalanta.it/images/atalanta/products/large/AT23A02.webp",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Genoa",
+        "description": "Shirt Player Genoa Home 23/24",
+        "img": "https://www.lacampionessa.com/40054-large_default/2023-24-genoa-home-shirt-kappa.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Genoa",
+        "description": "Shirt Player Genoa Away 23/24",
+        "img": "https://www.ferrarisport.it/wp-content/uploads/2017/12/UB331M4TWGENA01_1800x1800.webp",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Inter",
+        "description": "Shirt Player Inter Home 23/24",
+        "img": "https://italiansportswearcollection.com/cdn/shop/products/JUVENTUSHOMEJERSEY2023_24_2_32c22365-21f6-4469-bb83-ff1c6e396df4.jpg?v=1692072492",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Inter",
+        "description": "Shirt Player Inter Away 23/24",
+        "img": "https://calcioitalia.com/media/cache/sylius_shop_product_large_thumbnail/f1/cc/2a17d08a1213c1c22c8959dd121f.jpeg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Juventus",
+        "description": "Shirt Player Juventus Home 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/05/14/PgcWANYFeTtg87Q.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Juventus",
+        "description": "Shirt Player Juventus Away 23/24",
+        "img": "https://www.cisalfasport.it/dw/image/v2/BBVV_PRD/on/demandware.static/-/Sites-cisalfa-master/default/dw63b2ca19/cisalfa/files/S5590046-UNI/image/S5590046_UNI.jpg?sw=960&sh=1200",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Lazio",
+        "description": "Shirt Player Lazio Home 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/07/07/Tn24q4VZTHRPfbQ.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Lazio",
+        "description": "Shirt Player Lazio Away 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/07/07/ltyfLnL5xDpmS2r.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Milan",
+        "description": "Shirt Player Milan Home 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/06/01/IeVh9bRwT7UXGKX.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Milan",
+        "description": "Shirt Player Milan Away 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/07/20/mOSFKQMBSEMCunr.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Monza",
+        "description": "Shirt Player Monza Home 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/07/16/YNcc4iMV1pOtwVN.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Napoli",
+        "description": "Shirt Player Napoli Home 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/07/11/ZeKXe5FaF3LabzB.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Napoli",
+        "description": "Shirt Player Napoli Away 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/07/11/CYQT8pD9BDvTq3v.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Roma",
+        "description": "Shirt Player Roma Home 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/10/09/NNkFFHZWkTtas60.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Roma",
+        "description": "Shirt Player Roma Away 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/10/09/y6sZKzvsmmjWwuS.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
+        "name": "Torino",
+        "description": "Shirt Player Torino Home 23/24",
+        "img": "https://cdn.footballkitarchive.com/2023/07/22/BPl1GVVunMHAC0E.jpg",
+        "price": 30.00,
+        "category": "SerieA"
+    }
+    
+]

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <ul class="navbar-nav flex-row justify-content-center p-2 border-bottom">
+      <li class="nav-item me-3 fs-5">
+        Ordini
+      </li>
+      <li class="nav-item fs-5" (click)="logout()">
+        Disconnettersi
+      </li>
+    </ul>
+    <div class="text-center mt-5">
+      <p>Non hai ancora effettuato nessun ordine</p>
+      <button type="button" class="btn bgButton text-white" [routerLink]="['/']">INIZIA A FARE ACQUISTI</button>
+    </div>
+  </div>
+  
