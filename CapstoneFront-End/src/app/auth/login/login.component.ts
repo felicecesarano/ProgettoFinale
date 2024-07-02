@@ -19,9 +19,20 @@ export class LoginComponent {
   login(): void {
     this.authSrv.login(this.log).subscribe(
       (response) => {
-        if (response.accessToken) {
+        if (response.accessToken && response.utente) {
           this.authSrv.setToken(response.accessToken);
-          this.router.navigate(['/']); // Redirect to home page or desired route
+          const role = response.utente.role;
+
+          if (role === 'User' || role === 'Admin') {
+            // Puoi fare ulteriori azioni in base al ruolo se necessario
+            console.log('Utente autenticato con ruolo:', role);
+
+            this.authSrv.setUserName(response.utente.nome);
+            this.router.navigate(['/']); // Redirect to home page or desired route
+          } else {
+            console.error('Utente non autorizzato.');
+            // Gestire l'autenticazione fallita o reindirizzare a una pagina di errore
+          }
         }
       },
       (error) => {

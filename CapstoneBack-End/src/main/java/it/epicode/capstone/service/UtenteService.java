@@ -45,6 +45,7 @@ public class UtenteService {
             utente.setNome(utenteDto.getNome());
             utente.setCognome(utenteDto.getCognome());
             utente.setPassword(passwordEncoder.encode(utenteDto.getPassword()));
+            utente.setRole(utenteDto.getRole()); // Impostiamo il ruolo dall'UtenteDto
             utenteRepository.save(utente);
             sendMail(utente.getEmail());
 
@@ -57,6 +58,18 @@ public class UtenteService {
         }
     }
 
+    public void deleteUtenteById(Integer id) {
+        utenteRepository.deleteById(id);
+    }
+
+    public Utente updateUtenteRole(Integer id, String role) {
+        Utente utente = utenteRepository.findById(id)
+                .orElseThrow(() -> new BadRequestException("Utente non trovato con id: " + id));
+
+        utente.setRole(role);
+        return utenteRepository.save(utente);
+    }
+
     private void sendMail(String email) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(email);
@@ -65,10 +78,4 @@ public class UtenteService {
 
         javaMailSender.send(message);
     }
-
-
-    public void deleteUtenteById(Integer id) {
-        utenteRepository.deleteById(id);
-    }
-
 }

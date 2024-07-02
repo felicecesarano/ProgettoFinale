@@ -8,6 +8,9 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./account.component.scss']
 })
 export class AccountComponent {
+  showOrders: boolean = true;
+  showAddProduct: boolean = false;
+  showAllProducts: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) { }
 

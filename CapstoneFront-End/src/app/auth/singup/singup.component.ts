@@ -21,13 +21,16 @@ export class SingupComponent {
   signup(): void {
     this.authSrv.signup(this.sign).subscribe(
       (response) => {
+        console.log('Registrazione avvenuta con successo:', response);
         this.router.navigate(['/login']);
       },
       (error: HttpErrorResponse) => {
-        if (error.status === 403) {
-          console.error('Accesso negato:', error);
+        if (error.status === 400) {
+          console.error('Errore durante la registrazione:', error.error);
+          // Esempio: Mostra un messaggio di errore all'utente
+          alert('Errore durante la registrazione: ' + error.error.message);
         } else {
-          console.error('Errore durante la registrazione:', error);
+          console.error('Errore imprevisto durante la registrazione:', error);
         }
       }
     );

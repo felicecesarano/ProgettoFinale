@@ -100,7 +100,7 @@
     <div class="border-top p-4">
         <div class="d-flex align-items-center justify-content-center text-white bgButton p-2">
             <i class="bi bi-lock"></i>
-            <p class="m-0 ms-4">CHECKOUT - {{ getTotalPrice() }} EUR</p>
+            <button type="button" class="m-0 ms-4 btn bgButton text-white" (click)="checkout()">CHECKOUT - {{ getTotalPrice() }} EUR</button>
         </div>
     </div>
 </div>

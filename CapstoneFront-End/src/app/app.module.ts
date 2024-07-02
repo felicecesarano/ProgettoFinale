@@ -29,6 +29,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { TokenInterceptor } from './auth/token.interceptor';
 import { AuthService } from './auth/auth.service';
 import { AccountComponent } from './components/account/account.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { AllProductComponent } from './components/all-product/all-product.component';
+
 
 
 const routes: Route[] = [
@@ -72,6 +75,14 @@ const routes: Route[] = [
     path: 'account',
     component: AccountComponent,
   },
+  {
+    path: 'add',
+    component: AddProductComponent,
+  },
+  {
+    path: 'product',
+    component: AllProductComponent,
+  }
 ]
 @NgModule({
   declarations: [
@@ -96,14 +107,16 @@ const routes: Route[] = [
     CatalogueBundesligaComponent,
     CatalogueRetroComponent,
     CarouselComponent,
-    AccountComponent
+    AccountComponent,
+    AddProductComponent,
+    AllProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     AuthService, {
