@@ -35,11 +35,11 @@ public class AuthService {
                 authDataDto.setUtente(utente);
                 return authDataDto;
             } else {
-                throw new UnauthorizedException("Errore in fase di login, ritentare.");
+                throw new UnauthorizedException("Email o password errata.");
             }
-
         } else {
-            throw new NotFoundException("Utente con email: " + utenteLoginDto.getEmail() + "non trovato.");
+            throw new NotFoundException("Utente con email: " + utenteLoginDto.getEmail() + " non trovato.");
         }
     }
 }
+

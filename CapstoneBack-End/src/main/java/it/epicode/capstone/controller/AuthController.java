@@ -13,6 +13,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @SuppressWarnings("all")
 @RestController
 @RequestMapping("/auth")
@@ -42,6 +44,11 @@ public class AuthController {
         return authService.authenticateUtenteAndGenerateToken(utenteLoginDTO);
     }
 
+    @DeleteMapping("/utenti/{id}")
+    public void deleteUtente(@PathVariable Integer id) {
+        utenteService.deleteUtenteById(id);
+    }
+
     @PutMapping("/utenti/{id}/role")
     public Utente updateUtenteRole(@PathVariable Integer id, @RequestParam String role) {
         try {
@@ -54,5 +61,10 @@ public class AuthController {
             e.printStackTrace(); // Questo può essere sostituito con un logging più robusto come Log4j o simile
             throw e; // Rilancia l'eccezione per farla gestire globalmente
         }
+    }
+
+    @GetMapping("/utenti")
+    public List<Utente> getAllUtenti() {
+        return utenteService.getAllUtenti();
     }
 }

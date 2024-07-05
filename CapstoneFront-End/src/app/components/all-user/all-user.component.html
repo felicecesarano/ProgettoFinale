@@ -1,0 +1,46 @@
+<div class="container my-5">
+    <h2 class="text-center">Elenco Utenti</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Nome</th>
+          <th>Cognome</th>
+          <th>Admin</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.nome }}</td>
+          <td>{{ user.cognome }}</td>
+          <td>
+            <span *ngIf="user.role === 'User'; else adminIcon">
+              <i class="bi bi-x-circle text-danger"></i>
+            </span>
+            <ng-template #adminIcon>
+              <i class="bi bi-check-circle text-success"></i>
+            </ng-template>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-danger btn-lg" (click)="confirmDelete(user.id)">
+              <i class="bi bi-trash"></i>
+            </button>
+            <button *ngIf="user.role === 'Admin'"
+                    class="btn btn-sm btn-primary btn-lg"
+                    (click)="changeUserRole(user.id, 'User')">
+              <i class="bi bi-person-fill-down"></i>
+            </button>
+            <button *ngIf="user.role === 'User'"
+                    class="btn btn-sm btn-primary btn-lg"
+                    (click)="changeUserRole(user.id, 'Admin')">
+              <i class="bi bi-person-fill-up"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -17,7 +17,7 @@ export class SingupComponent {
   };
 
   constructor(private authSrv: AuthService, private router: Router) {}
-
+  
   signup(): void {
     this.authSrv.signup(this.sign).subscribe(
       (response) => {
@@ -27,10 +27,14 @@ export class SingupComponent {
       (error: HttpErrorResponse) => {
         if (error.status === 400) {
           console.error('Errore durante la registrazione:', error.error);
-          // Esempio: Mostra un messaggio di errore all'utente
-          alert('Errore durante la registrazione: ' + error.error.message);
+          if (error.error.includes("Lo username è già stato preso")) {
+            alert('Errore durante la registrazione: l\'email è già stata utilizzata.');
+          } else {
+            alert('Errore durante la registrazione: ' + error.error);
+          }
         } else {
           console.error('Errore imprevisto durante la registrazione:', error);
+          alert('Errore imprevisto durante la registrazione, riprovare più tardi.');
         }
       }
     );

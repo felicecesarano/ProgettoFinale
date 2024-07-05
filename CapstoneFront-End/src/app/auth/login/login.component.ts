@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-
   log = {
     email: '',
     password: ''
@@ -21,21 +21,26 @@ export class LoginComponent {
       (response) => {
         if (response.accessToken && response.utente) {
           this.authSrv.setToken(response.accessToken);
+          this.authSrv.setUser(response.utente);
           const role = response.utente.role;
 
           if (role === 'User' || role === 'Admin') {
-            // Puoi fare ulteriori azioni in base al ruolo se necessario
             console.log('Utente autenticato con ruolo:', role);
-
             this.authSrv.setUserName(response.utente.nome);
-            this.router.navigate(['/']); // Redirect to home page or desired route
+            this.router.navigate(['/']);
           } else {
             console.error('Utente non autorizzato.');
-            // Gestire l'autenticazione fallita o reindirizzare a una pagina di errore
           }
         }
       },
-      (error) => {
+      (error: HttpErrorResponse) => {
+        if (error.status === 401) {
+          alert('Errore di autenticazione: Email o password errata.');
+        } else if (error.status === 404) {
+          alert('Errore di autenticazione: Email non registrata.');
+        } else {
+          alert('Errore di autenticazione: Si è verificato un errore imprevisto.');
+        }
         console.error('Errore di autenticazione:', error);
       }
     );

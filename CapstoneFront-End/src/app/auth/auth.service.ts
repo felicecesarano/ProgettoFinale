@@ -7,7 +7,6 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-
   private apiUrl = 'http://localhost:8080/auth';
 
   constructor(private http: HttpClient) { }
@@ -19,7 +18,7 @@ export class AuthService {
         console.log('Login response:', response); // Log della risposta per debug
         if (response.accessToken && response.utente) {
           this.setToken(response.accessToken);
-          this.setUserName(response.utente.nome); // Imposta il nome dell'utente
+          this.setUser(response.utente); // Salva l'oggetto utente completo
         }
       })
     );
@@ -38,6 +37,20 @@ export class AuthService {
     return localStorage.getItem('authToken');
   }
 
+  setUser(user: any): void {
+    localStorage.setItem('user', JSON.stringify(user));
+  }
+
+  getUser(): any {
+    const user = localStorage.getItem('user');
+    return user ? JSON.parse(user) : null;
+  }
+
+  getUserId(): number | null {
+    const user = this.getUser();
+    return user ? user.id : null;
+  }
+
   setUserName(name: string): void {
     localStorage.setItem('userName', name);
   }
@@ -46,8 +59,23 @@ export class AuthService {
     return localStorage.getItem('userName');
   }
 
+  getAllUsers(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/utenti`);
+  }
+
+  deleteUser(userId: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/utenti/${userId}`);
+  }
+
+  updateUserRole(userId: number, role: string): Observable<any> {
+    const formData = new FormData();
+    formData.append('role', role);
+    return this.http.put<any>(`${this.apiUrl}/utenti/${userId}/role`, formData);
+  }
+  
   logout(): void {
     localStorage.removeItem('authToken');
+    localStorage.removeItem('user');
     localStorage.removeItem('userName');
   }
 }

@@ -19,7 +19,7 @@ export class CartService {
     }
   }
 
-  private updateCartItems(cartItems: any[]) {
+  updateCartItems(cartItems: any[]) { 
     this.cartItemsSubject.next(cartItems);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }

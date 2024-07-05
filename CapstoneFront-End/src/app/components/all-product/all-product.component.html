@@ -1,26 +1,83 @@
-<div class="container">
-    <h2>All Products</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Image</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let product of products">
-          <td>{{ product.id }}</td>
-          <td>{{ product.name }}</td>
-          <td>{{ product.description }}</td>
-          <td><img [src]="product.img" alt="{{ product.name }}" class="product-image"></td>
-          <td>
-            <button (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+<div class="container my-5">
+  <h2 class="text-center">All Products</h2>
+
+  <!-- Selezione della categoria -->
+  <div class="d-flex align-items-center my-3">
+    <label for="categoryFilter" class="me-2">Seleziona Categoria:</label>
+    <select id="categoryFilter" class="form-select form-select-sm me-2" (change)="filterByCategory($event)">
+      <option value="" selected>Tutte le Categorie</option>
+      <option *ngFor="let category of categories ?? []" [value]="category">{{ category }}</option>
+    </select>
+    <button class="btn btn-outline-secondary btn-sm" (click)="clearFilter()">Resetta Filtro</button>
   </div>
-  
+
+  <!-- Tabella dei prodotti filtrata per categoria -->
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Description</th>
+        <th class="text-center">Image</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <ng-container *ngIf="isProductInSelectedCategory(product)">
+          <td class="text-center">{{ product.id }}</td>
+          <td class="text-center">{{ product.name }}</td>
+          <td class="text-center">{{ product.description }}</td>
+          <td class="text-center"><img [src]="product.img" alt="{{ product.name }}" class="product-image"></td>
+          <td class="text-center">
+            <button (click)="deleteProduct(product.id)" class="btn btn-custom btn-sm">
+              <i class="bi bi-trash"></i>
+            </button>
+            
+            <button (click)="openEditModal(product)" class="btn btn-custom btn-sm btn-edit">
+              <i class="bi bi-pencil" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+            </button>
+            
+          </td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modale per la modifica del prodotto -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modifica Prodotto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="updateProduct(editForm)" #editForm="ngForm">
+          <div class="mb-3">
+            <label for="editName" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="editName" required [(ngModel)]="editProduct.name" name="name">
+          </div>
+          <div class="mb-3">
+            <label for="editDescription" class="form-label">Descrizione</label>
+            <input type="text" class="form-control" id="editDescription" required [(ngModel)]="editProduct.description" name="description">
+          </div>
+          <div class="mb-3">
+            <label for="editImg" class="form-label">URL Immagine</label>
+            <input type="text" class="form-control" id="editImg" required [(ngModel)]="editProduct.img" name="img">
+          </div>
+          <div class="mb-3">
+            <label for="editPrice" class="form-label">Prezzo</label>
+            <input type="number" class="form-control" id="editPrice" required [(ngModel)]="editProduct.price" name="price">
+          </div>
+          <div class="mb-3">
+            <label for="editCategory" class="form-label">Categoria</label>
+            <input type="text" class="form-control" id="editCategory" required [(ngModel)]="editProduct.category" name="category">
+          </div>
+          <button type="submit" class="btn btn-primary">Salva Modifiche</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

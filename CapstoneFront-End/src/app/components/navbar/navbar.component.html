@@ -52,17 +52,19 @@
                     </ul>
                 </div>
                 <div class="border-top px-5 pt-2">
-                    <a class="text-decoration-none text-black" (click)="navigateToAccount()"><i class="bi bi-person"></i><span
-                            class="ms-1">Account</span></a>
+                    <a class="text-decoration-none text-black" (click)="navigateToAccount()"><i
+                            class="bi bi-person"></i><span class="ms-1">Account</span></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="text-center">
-        <a href=""><img src="../../../assets/Logo.jpg" alt="Logo" class="ms-lg-5 w-25 ms-sm-0 me-sm-3 me-md-0 ms-md-4"></a>
+        <a href=""><img src="../../../assets/Logo.jpg" alt="Logo"
+                class="ms-lg-5 w-25 ms-sm-0 me-sm-3 me-md-0 ms-md-4"></a>
     </div>
     <div class="d-sm-flex flex-sm-column flex-md-row">
-        <i class="bi bi-search"></i>
+        <i class="bi bi-search" data-bs-toggle="offcanvas" data-bs-target="#searchCanvas"
+            aria-controls="searchCanvas"></i>
         <i class="bi bi-person mx-lg-3 mx-md-2" (click)="navigateToAccount()"></i>
         <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
             class="bi bi-bag"></i>
@@ -76,31 +78,85 @@
             <i class="bi bi-bag "></i> <span class="ms-2">{{ getTotalItems() }} Articoli</span>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="card mx-4 my-2" style="max-width: 540px;"*ngFor="let item of cartItems">
-            <div >
+        <div class="card mx-4 my-2" style="max-width: 540px;" *ngFor="let item of cartItems">
+            <div>
                 <div class="row g-0">
                     <div class="col-sm-4 d-flex align-items-center">
                         <img [src]="item.product.img" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-sm-8">
                         <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                                <p class="card-text"><small class="text-body-secondary">{{ item.product.name }}</small></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="card-text"><small class="text-body-secondary">{{ item.product.name }}</small>
+                                </p>
                                 <p class="card-text fw-semibold">{{ item.totalPrice }}€</p>
                             </div>
                             <h6 class="card-text">{{ item.product.description }}</h6>
-                            <p class="card-text m-0"><small class="text-body-secondary">{{ item.size }}</small></p>
+                            <p class="card-text m-0"><small class="text-body-secondary">Size: {{ item.size }}</small>
+                            </p>
+                            <div class="d-flex align-items-center mt-2">
+                                <p class="card-text m-0 me-2"><small class="text-body-secondary">Quantità: {{
+                                        item.quantity }}</small></p>
+                                <button class="btn btn-sm btn-outline-secondary p-0 me-1"
+                                    (click)="decreaseQuantity(item)">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary p-0 " (click)="increaseQuantity(item)">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
                             <i class="bi bi-trash3 float-end text-danger" (click)="removeItem(item)"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
     <div class="border-top p-4">
         <div class="d-flex align-items-center justify-content-center text-white bgButton p-2">
             <i class="bi bi-lock"></i>
-            <button type="button" class="m-0 ms-4 btn bgButton text-white" (click)="checkout()">CHECKOUT - {{ getTotalPrice() }} EUR</button>
+            <button type="button" class="m-0 ms-4 btn bgButton text-white" (click)="checkout()">CHECKOUT - {{
+                getTotalPrice() }} EUR</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="searchCanvas" aria-labelledby="searchCanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="searchCanvasLabel">Ricerca Prodotti</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+            <div class="mb-3">
+                <label for="searchInput" class="form-label">Nome Prodotto</label>
+                <input type="text" class="form-control" id="searchInput" [(ngModel)]="searchTerm" name="searchTerm"
+                    (input)="onSearchInput($event)">
+            </div>
+        </form>
+
+        <div *ngIf="searchResults.length > 0">
+            <h6 class="mt-4">Risultati della Ricerca:</h6>
+            <div class="card mx-4 my-2" style="max-width: 540px;" *ngFor="let result of searchResults">
+                <div class="row g-0">
+                    <div class="col-sm-4 d-flex align-items-center">
+                        <img [src]="result.img" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ result.name }}</h5>
+                            <p class="card-text">{{ result.description }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="card-text fw-semibold">{{ result.price }}€</p>
+                                <a [routerLink]="getProductRoute(result.category)" class="btn btn-primary">Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

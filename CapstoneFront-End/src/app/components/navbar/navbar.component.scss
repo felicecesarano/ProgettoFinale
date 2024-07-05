@@ -35,3 +35,12 @@ font-size: 1rem;
   }
   
 }
+
+.bi-dash, .bi-plus {
+  font-size: 1rem;
+}
+
+.btn-outline-secondary {
+  --bs-btn-hover-bg: #F65D21;
+  --bs-btn-active-bg: #F65D21;
+}

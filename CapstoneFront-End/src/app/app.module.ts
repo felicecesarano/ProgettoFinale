@@ -31,6 +31,10 @@ import { AuthService } from './auth/auth.service';
 import { AccountComponent } from './components/account/account.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { AllProductComponent } from './components/all-product/all-product.component';
+import { AllUserComponent } from './components/all-user/all-user.component';
+import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
+import { PaymentCancelComponent } from './components/payment-cancel/payment-cancel.component';
+
 
 
 
@@ -76,12 +80,12 @@ const routes: Route[] = [
     component: AccountComponent,
   },
   {
-    path: 'add',
-    component: AddProductComponent,
+    path: 'success',
+    component: PaymentSuccessComponent,
   },
   {
-    path: 'product',
-    component: AllProductComponent,
+    path: 'cancel',
+    component: PaymentCancelComponent,
   }
 ]
 @NgModule({
@@ -110,6 +114,9 @@ const routes: Route[] = [
     AccountComponent,
     AddProductComponent,
     AllProductComponent,
+    AllUserComponent,
+    PaymentSuccessComponent,
+    PaymentCancelComponent,
   ],
   imports: [
     BrowserModule,
