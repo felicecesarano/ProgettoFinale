@@ -1,26 +1,24 @@
+<div>
+    <img src="" alt="Resto Del Mondo" class="w-100">
+</div>
+
 <div class="container-fluid p-5 pb-0 mb-5">
-    <div class="text-center mb-5">
-<h4>Le più richieste</h4>
-    </div>
-    <div class="row d-none d-xxl-flex">
-        <ng-container  *ngFor="let product of randomProducts">
-            <div class="card border-0" style="width: 19.07rem;">
-                <div class="card-img-top-container">
-                    <img [src]="product.img"
-                        class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
-                    <button type="button" class="btn bgButton text-white" (click)="openModal(product)">
-                        Dai un occhiata
-                    </button>
-                </div>
-                <div class="card-body text-center">
-                    <h6 class="card-text">{{product.name}}</h6>
-                    <p class="m-0">{{product.description}}</p>
-                    <p class="fw-semibold">{{product.price}}€</p>
-                </div>
+    <div class="row">
+        <div class="card border-0" style="width: 19.07rem;" *ngFor="let product of products"> 
+            <div class="card-img-top-container">
+                <img [src]="product.img" [alt]="product.name"
+                    class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
+                <button type="button" class="btn bgButton text-white" (click)="openModal(product)">
+                    Dai un occhiata
+                </button>
             </div>
-        </ng-container>
+            <div class="card-body text-center">
+                <h6 class="card-text">{{ product.name }}</h6>
+                <p class="m-0">{{ product.description}}</p>
+                <p class="fw-semibold">{{ product.price}} €</p>
+            </div>
+        </div>
     </div>
-    <app-carousel [products]="randomProducts" class="d-xxl-none"></app-carousel>
 </div>
 
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

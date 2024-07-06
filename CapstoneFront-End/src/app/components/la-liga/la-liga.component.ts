@@ -16,17 +16,17 @@ export class LaLigaComponent implements OnInit{
   constructor(private dataSrv: DataService, private cartService: CartService) { }
 
   ngOnInit() {
-    this.getRandomSerieAProducts();
+    this.getRandomLaLigaProducts();
   }
 
-  getRandomSerieAProducts() {
+  getRandomLaLigaProducts() {
     this.dataSrv.getProducts().subscribe(
       (data: any[]) => {
-        const serieAProducts = data.filter(product => product.category === 'SerieA');
-        this.randomProducts = this.getRandomItems(serieAProducts, 5);
+        const LaLigaProducts = data.filter(product => product.category === 'LaLiga');
+        this.randomProducts = this.getRandomItems(LaLigaProducts, 5);
       },
       error => {
-        console.error('Errore durante il recupero dei prodotti SerieA', error);
+        console.error('Errore durante il recupero dei prodotti LaLiga', error);
       }
     );
   }

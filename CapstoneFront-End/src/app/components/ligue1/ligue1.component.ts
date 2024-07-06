@@ -16,17 +16,17 @@ export class Ligue1Component implements OnInit{
   constructor(private dataSrv: DataService, private cartService: CartService) { }
 
   ngOnInit() {
-    this.getRandomSerieAProducts();
+    this.getRandomLigue1Products();
   }
 
-  getRandomSerieAProducts() {
+  getRandomLigue1Products() {
     this.dataSrv.getProducts().subscribe(
       (data: any[]) => {
-        const serieAProducts = data.filter(product => product.category === 'SerieA');
-        this.randomProducts = this.getRandomItems(serieAProducts, 5);
+        const Ligue1Products = data.filter(product => product.category === 'Ligue1');
+        this.randomProducts = this.getRandomItems(Ligue1Products, 5);
       },
       error => {
-        console.error('Errore durante il recupero dei prodotti SerieA', error);
+        console.error('Errore durante il recupero dei prodotti Ligue1', error);
       }
     );
   }

@@ -44,7 +44,8 @@ export class NavbarComponent implements OnInit {
 
   getTotalPrice(): number {
     return this.cartItems.reduce((acc, item) => acc + item.totalPrice, 0);
-  }
+}
+
 
   removeItem(item: any): void {
     this.cartService.removeFromCart(item);
@@ -80,20 +81,14 @@ export class NavbarComponent implements OnInit {
   
     const customerId = this.authService.getUserId();
     const paymentDtos = this.cartItems.map(item => ({
-      amount: item.totalPrice * 100,  // Stripe richiede l'importo in centesimi
+      amount: item.product.price,
       customerId: customerId,
       productId: item.product.id,
       size: item.size,
       quantity: item.quantity,
-      dataOrder: {  // Aggiungi i metadati qui
-        productName: item.product.name,
-        productDescription: item.product.description,
-        customerId: customerId,
-        size: item.size,
-        quantity: item.quantity
-        // Aggiungi altri metadati desiderati
-      }
-    }));
+  }));
+  
+  console.log('Dati inviati al backend:', paymentDtos);
   
     try {
       const response = await this.http.post<any>('http://localhost:8080/api/create-checkout-session', paymentDtos).toPromise();
@@ -112,7 +107,6 @@ export class NavbarComponent implements OnInit {
       if (stripeResult.error) {
         console.error('Errore durante il checkout:', stripeResult.error.message);
       } else {
-        // Chiamata per posizionare l'ordine dopo il redirect
         this.placeOrder(paymentDtos);
       }
     } catch (error) {
@@ -120,7 +114,6 @@ export class NavbarComponent implements OnInit {
     }
   }
   
-
 
 
   async placeOrder(paymentDtos: any[]): Promise<void> {

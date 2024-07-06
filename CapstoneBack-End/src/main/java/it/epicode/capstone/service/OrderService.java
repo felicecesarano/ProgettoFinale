@@ -6,8 +6,6 @@ import it.epicode.capstone.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class OrderService {
 
@@ -18,12 +16,8 @@ public class OrderService {
         orderRepository.save(order);
     }
 
-    public void saveOrders(List<Order> orders) {
-        orderRepository.saveAll(orders);
-    }
-
     public void processPayment(PaymentDto paymentDto) {
-        // Convertire PaymentDto in Order
+        // Converti PaymentDto in Order
         Order order = convertToOrder(paymentDto);
         // Salvare l'ordine
         saveOrder(order);
@@ -38,6 +32,4 @@ public class OrderService {
         order.setTotalAmount(paymentDto.getAmount());
         return order;
     }
-
-    // Altri metodi di servizio, se necessario
 }

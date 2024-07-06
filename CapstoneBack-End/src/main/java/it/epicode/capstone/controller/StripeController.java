@@ -4,7 +4,6 @@ import com.stripe.Stripe;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Event;
-import com.stripe.model.PaymentIntent;
 import com.stripe.model.checkout.Session;
 import com.stripe.net.Webhook;
 import com.stripe.param.checkout.SessionCreateParams;
@@ -19,9 +18,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
 
 @RestController
 @RequestMapping("/api")
@@ -46,17 +45,14 @@ public class StripeController {
             Stripe.apiKey = stripeSecretKey;
 
             List<SessionCreateParams.LineItem> lineItems = new ArrayList<>();
-            Map<String, String> metadata = new HashMap<>();
+            Map<String, String> metadata = new HashMap<>();  // Usiamo Map<String, String> invece di Map<String, Object>
 
             for (PaymentDto paymentDto : paymentDtos) {
-                if (paymentDto.getAmount() == null || paymentDto.getAmount() <= 0) {
-                    return ResponseEntity.badRequest().body("Amount must be greater than zero");
-                }
-
                 metadata.put("customerId", String.valueOf(paymentDto.getCustomerId()));
                 metadata.put("productId", String.valueOf(paymentDto.getProductId()));
                 metadata.put("size", paymentDto.getSize());
                 metadata.put("quantity", String.valueOf(paymentDto.getQuantity()));
+                metadata.put("totalAmount", String.valueOf(paymentDto.getAmount()));
 
                 SessionCreateParams.LineItem.PriceData priceData =
                         SessionCreateParams.LineItem.PriceData.builder()
@@ -76,6 +72,7 @@ public class StripeController {
                 );
             }
 
+            // Creazione dei parametri della sessione
             SessionCreateParams params =
                     SessionCreateParams.builder()
                             .addPaymentMethodType(SessionCreateParams.PaymentMethodType.CARD)
@@ -86,14 +83,17 @@ public class StripeController {
                             .setCancelUrl("http://localhost:4200/cancel")
                             .build();
 
+            // Creazione della sessione di checkout
             Session session = Session.create(params);
 
-            // Return the session ID to the client
+            // Ritorna l'ID della sessione al client
             return ResponseEntity.ok().body(new CheckoutDto(session.getId()));
         } catch (StripeException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+
+
 
     @PostMapping("/webhooks")
     public ResponseEntity<?> handleWebhookEvent(@RequestBody String payload,
@@ -126,16 +126,18 @@ public class StripeController {
             Long productId = Long.parseLong(metadata.get("productId"));
             String size = metadata.get("size");
             Integer quantity = Integer.parseInt(metadata.get("quantity"));
+            Long totalAmount = Long.parseLong(metadata.get("totalAmount"));
 
-            // Assuming you have a method in OrderService to process the payment
-            PaymentDto paymentDto = new PaymentDto();
-            paymentDto.setAmount(session.getAmountTotal());
-            paymentDto.setCustomerId(customerId);
-            paymentDto.setProductId(productId);
-            paymentDto.setSize(size);
-            paymentDto.setQuantity(quantity);
+            // Costruisci l'oggetto Order
+            Order order = new Order();
+            order.setCustomerId(customerId);
+            order.setProductId(productId);
+            order.setSize(size);
+            order.setQuantity(quantity);
+            order.setTotalAmount(totalAmount);
 
-            orderService.processPayment(paymentDto);
+            // Salva l'ordine nel database
+            orderService.saveOrder(order);
         } catch (NumberFormatException e) {
             System.err.println("Error parsing metadata: " + e.getMessage());
         }

@@ -44,86 +44,338 @@
     {
         "name": "Juventus",
         "description": "Shirt Player Juventus Home 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/05/14/PgcWANYFeTtg87Q.jpg",
+        "img": "https://magliecalciostore.com/media/cache/sylius_shop_product_large_thumbnail/12/85/cab650f9e4b9c3a6f1061a56b1e7.jpeg",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Juventus",
         "description": "Shirt Player Juventus Away 23/24",
-        "img": "https://www.cisalfasport.it/dw/image/v2/BBVV_PRD/on/demandware.static/-/Sites-cisalfa-master/default/dw63b2ca19/cisalfa/files/S5590046-UNI/image/S5590046_UNI.jpg?sw=960&sh=1200",
+        "img": "https://italiansportswearcollection.com/cdn/shop/products/JUVENTUSAWAYJERSEY2023_24-KIDS_2.jpg?v=1689296190",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Lazio",
         "description": "Shirt Player Lazio Home 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/07/07/Tn24q4VZTHRPfbQ.jpg",
+        "img": "https://www.laziostylestore.com/images/lazio/products/large/LZ23A01_1.webp",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Lazio",
         "description": "Shirt Player Lazio Away 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/07/07/ltyfLnL5xDpmS2r.jpg",
+        "img": "https://www.laziostylestore.com/images/lazio/products/large/LZ23A02.webp",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Milan",
         "description": "Shirt Player Milan Home 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/06/01/IeVh9bRwT7UXGKX.jpg",
+        "img": "https://store.acmilan.com/cdn/shop/products/770382-A81_01.jpg?v=1691995257",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Milan",
         "description": "Shirt Player Milan Away 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/07/20/mOSFKQMBSEMCunr.jpg",
+        "img": "https://store.acmilan.com/cdn/shop/products/770391-A83_01_e7098085-66f2-4215-ad04-e3a933884d06.jpg?v=1691999010",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Monza",
         "description": "Shirt Player Monza Home 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/07/16/YNcc4iMV1pOtwVN.jpg",
+        "img": "https://cdn.fifacm.com/content/media/imgs/fc24/kits/j0_111811_0.png",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Napoli",
         "description": "Shirt Player Napoli Home 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/07/11/ZeKXe5FaF3LabzB.jpg",
+        "img": "https://static.sscnapoli.it/img/p/8/5/9/0/8590-large_default.jpg",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Napoli",
         "description": "Shirt Player Napoli Away 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/07/11/CYQT8pD9BDvTq3v.jpg",
+        "img": "https://static.sscnapoli.it/img/p/8/0/0/7/8007-large_default.jpg",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Roma",
         "description": "Shirt Player Roma Home 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/10/09/NNkFFHZWkTtas60.jpg",
+        "img": "https://labottegadelcalcio.com/cdn/shop/files/home_jers_1.webp?v=1698314481",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Roma",
         "description": "Shirt Player Roma Away 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/10/09/y6sZKzvsmmjWwuS.jpg",
+        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/93c4959b26914d9586658ebf0cc5f15d_9366/Maglia_Away_23-24_Junior_AS_Roma_Beige_IK7161_01_laydown.jpg",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Torino",
         "description": "Shirt Player Torino Home 23/24",
-        "img": "https://cdn.footballkitarchive.com/2023/07/22/BPl1GVVunMHAC0E.jpg",
+        "img": "https://torinofcstore.com/modules/ets_megamenu/views/img/upload/maglia-home-menu.png",
         "price": 30.00,
         "category": "SerieA"
+    },
+    {
+        "name": "Manchester City",
+        "description": "Shirt Player Man City Home 23/24",
+        "img": "https://shop.mancity.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog-MAN/default/dw088ef24b/images/large/701225660001_pp_01_mcfc.png?sw=1600&sh=1600&sm=fit",
+        "price": 30.00,
+        "category": "PremierLeague"
+    },
+    {
+        "name": "Manchester City",
+        "description": "Shirt Player Man City Away 23/24",
+        "img": "https://www.ferrarisport.it/wp-content/uploads/2017/12/puma__pum-770449-02__imagefront.jpg",
+        "price": 30.00,
+        "category": "PremierLeague"
+    },
+    {
+        "name": "Manchester United",
+        "description": "Shirt Player Man United Home 23/24",
+        "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/fe0ce38456ab4ad2871bafc400cca89d_9366/Maglia_Home_23-24_Junior_Manchester_United_FC_Rosso_IP1736_01_laydown.jpg",
+        "price": 30.00,
+        "category": "PremierLeague"
+    },
+    {
+        "name": "Manchester United",
+        "description": "Shirt Player Man United Away 23/24",
+        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/68d43873d276496cb59b1585cbe3c19a_9366/Maglia_Away_23-24_Junior_Manchester_United_FC_Verde_IA7195_01_laydown.jpg",
+        "price": 30.00,
+        "category": "PremierLeague"
+    },
+    {
+        "name": "Arsenal",
+        "description": "Shirt Player Arsenal Home 23/24",
+        "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/86cf0b5f4d894aa89d4dafcc00ab552c_9366/Maglia_Home_23-24_Arsenal_FC_Rosso_HZ2133_01_laydown.jpg",
+        "price": 30.00,
+        "category": "PremierLeague"
+    },
+    {
+        "name": "Arsenal",
+        "description": "Shirt Player Arsenal Away 23/24",
+        "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/9e30161f6f37431288e35c06b811f77a_9366/Maglia_Away_23-24_Arsenal_FC_Giallo_HZ2106_01_laydown.jpg",
+        "price": 30.00,
+        "category": "PremierLeague"
+    },
+    {
+        "name": "PSG",
+        "description": "Shirt Player PSG Home 23/24",
+        "img": "https://media.foot-store.it/catalog/product/cache/image/1800x/9df78eab33525d08d6e5fb8d27136e95/n/i/nike_dx2694-411_phsfh001-3144_1.jpg",
+        "price": 30.00,
+        "category": "Ligue1"
+    },
+    {
+        "name": "PSG",
+        "description": "Shirt Player PSG Away 23/24",
+        "img": "https://centrocamponegozio.com/cdn/shop/files/image_d0dc930f-1fe8-42d3-a1ff-02875dc2f64d.webp?v=1688698686",
+        "price": 30.00,
+        "category": "Ligue1"
+    },
+    {
+        "name": "Monaco",
+        "description": "Shirt Player Monaco Home 23/24",
+        "img": "https://shop.asmonaco.com/en/cdn/shop/files/Designsanstitre_19.png?v=1699878482",
+        "price": 30.00,
+        "category": "Ligue1"
+    },
+    {
+        "name": "Monaco",
+        "description": "Shirt Player Monaco Away 23/24",
+        "img": "https://shop.asmonaco.com/en/cdn/shop/files/Designsanstitre_22.png?v=1699878505",
+        "price": 30.00,
+        "category": "Ligue1"
+    },
+    {
+        "name": "Marseille",
+        "description": "Shirt Player Monaco Home 23/24",
+        "img": "https://images.footballfanatics.com/olympique-marseille/olympique-de-marseille-puma-home-authentic-shirt-2024-25_ss5_p-201056781+pv-2+u-dblkjgpjhm11ehjwnzfp+v-ifmqspykl4u82mvjjjlm.jpg?_hv=2&w=600",
+        "price": 30.00,
+        "category": "Ligue1"
+    },
+    {
+        "name": "Marseille",
+        "description": "Shirt Player Monaco Away 23/24",
+        "img": "https://www.soccerbox.com/media/catalog/product/cache/e5c18d5f608fefb2b3ef83fcb1922b34/o/l/olympique-marseille-away-shirt-23.jpg",
+        "price": 30.00,
+        "category": "Ligue1"
+    },
+    {
+        "name": "Real Madrid",
+        "description": "Shirt Player Real Madrid Home 23/24",
+        "img": "https://media.foot-store.it/catalog/product/cache/image/1800x/9df78eab33525d08d6e5fb8d27136e95/a/d/adidas_ia9977_white_4.jpg",
+        "price": 30.00,
+        "category": "LaLiga"
+    },
+    {
+        "name": "Real Madrid",
+        "description": "Shirt Player Real Madrid Away 23/24",
+        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/79792eebdc93491ca4cb54dd0df1e469_9366/Maglia_Away_23-24_Kids_Real_Madrid_Blu_IB0000_01_laydown.jpg",
+        "price": 30.00,
+        "category": "LaLiga"
+    },
+    {
+        "name": "Barcellona",
+        "description": "Shirt Player Barcellona Home 23/24",
+        "img": "https://www.ferrarisport.it/wp-content/uploads/2017/12/DX2687-456-D.webp",
+        "price": 30.00,
+        "category": "LaLiga"
+    },
+    {
+        "name": "Barcellona",
+        "description": "Shirt Player Barcellona Away 23/24",
+        "img": "https://img01.ztat.net/article/spp-media-p1/22cfbefdbd404a47861166f3f7952bcd/7eb824875ecb42a3b149c275846f5c8e.jpg?imwidth=156&filter=packshot",
+        "price": 30.00,
+        "category": "LaLiga"
+    },
+    {
+        "name": "Atletico Madrid",
+        "description": "Shirt Player Atletico Madrid Home 23/24",
+        "img": "https://foudys.com/cdn/shop/files/AURORA_DX2723-612_PHSFH001-2000_72cc6073-8b68-464b-a321-33f5ab1d39d6.jpg?v=1705491040&width=1946",
+        "price": 30.00,
+        "category": "LaLiga"
+    },
+    {
+        "name": "Atletico Madrid",
+        "description": "Shirt Player Atletico Madrid Away 23/24",
+        "img": "https://i.ebayimg.com/images/g/FH0AAOSw1OVk~M2q/s-l1600.jpg",
+        "price": 30.00,
+        "category": "LaLiga"
+    },
+    {
+        "name": "Bayern Monaco",
+        "description": "Shirt Player Bayern Monaco Home 23/24",
+        "img": "https://df-sportspecialist.it/cdn/shop/products/98456097.jpg?v=1686333811",
+        "price": 30.00,
+        "category": "Bundesliga"
+    },
+    {
+        "name": "Bayern Monaco",
+        "description": "Shirt Player Bayern Monaco Away 23/24",
+        "img": "https://calcioitalia.com/media/cache/sylius_shop_product_large_thumbnail/19/08/cd51fdf1bca8c7e08c5052b025e7.jpeg",
+        "price": 30.00,
+        "category": "Bundesliga"
+    },
+    {
+        "name": "Borussia Dortmund",
+        "description": "Shirt Player Borussia Dortmund Home 23/24",
+        "img": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/770603/01/fnd/EEA/fmt/png/Maglia-gara-Home-Borussia-Dortmund-Authentic-23/24-da-uomog",
+        "price": 30.00,
+        "category": "Bundesliga"
+    },
+    {
+        "name": "Borussia Dortmund",
+        "description": "Shirt Player Borussia Dortmund Away 23/24",
+        "img": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/770612/02/fnd/EEA/fmt/png/Maglia-gara-Away-Borussia-Dortmund-23/24-da-uomo",
+        "price": 30.00,
+        "category": "Bundesliga"
+    },
+    {
+        "name": "Bayer Leverkusen",
+        "description": "Shirt Player Bayer Leverkusen Home 23/24",
+        "img": "https://www.soccerstar.store/cdn/shop/products/FullSizeRender_1eaa5f08-9432-4f47-b636-96afa34c4413.jpg?v=1701103553",
+        "price": 30.00,
+        "category": "Bundesliga"
+    },
+    {
+        "name": "Bayer Leverkusen",
+        "description": "Shirt Player Bayer Leverkusen Away 23/24",
+        "img": "https://centrocamponegozio.com/cdn/shop/files/FBC25B43-A17D-47D3-8A4A-1F7A38716065.webp?v=1713135608",
+        "price": 30.00,
+        "category": "Bundesliga"
+    },
+    {
+        "name": "Boca Juniors",
+        "description": "Shirt Player Boca Juniors 96/97",
+        "img": "https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298",
+        "price": 40.00,
+        "category": "Vintage"
+    },
+    {
+        "name": "Real Madrid",
+        "description": "Shirt Player Real Madrid 04/05",
+        "img": "https://outletdelcalcio.eu/cdn/shop/products/05_14b573e3-9414-479d-8f54-d33f47307605.png?v=1666052299",
+        "price": 40.00,
+        "category": "Vintage"
+    },
+    {
+        "name": "Inter",
+        "description": "Shirt Player Inter 10/11",
+        "img": "https://italiansportswearcollection.com/cdn/shop/products/1_8834cbe0-2499-4ad7-af26-db398caac503.jpg?v=1672997321",
+        "price": 40.00,
+        "category": "Vintage"
+    },
+    {
+        "name": "Roma",
+        "description": "Shirt Player Roma 01/02",
+        "img": "https://calcioitalia.com/media/cache/sylius_shop_product_large_thumbnail/14/ee/9a18c252a4ba7a87e3ce7233705e.jpeg",
+        "price": 40.00,
+        "category": "Vintage"
+    },
+    {
+        "name": "River Plate",
+        "description": "Shirt Player River Plate 95/96",
+        "img": "https://www.dhresource.com/webp/m/0x0/f2/albu/g17/M01/0D/8B/rBVa4l_PN2qAebYpAAGLEg7grp0500.jpg",
+        "price": 40.00,
+        "category": "Vintage"
+    },
+    {
+        "name": "Italia",
+        "description": "Shirt Player Italia Mondiale 2006",
+        "img": "https://italiansportswearcollection.com/cdn/shop/products/2_1aa6fa7b-1cf0-4eb9-8952-ea75658e3540.jpg?v=1690979686",
+        "price": 40.00,
+        "category": "Vintage"
+    },
+    {
+        "name": "Inter Miami",
+        "description": "Shirt Player Inter Miami Away 23/24",
+        "img": "https://outletdelcalcio.eu/cdn/shop/files/1_e4c43116-20b1-471a-8174-155dea2351d3.png?v=1691602858",
+        "price": 35.00,
+        "category": "World"
+    },
+    {
+        "name": "Al-Nassr",
+        "description": "Shirt Player Al-Nassr Home 23/24",
+        "img": "https://centrocamponegozio.com/cdn/shop/files/CBB31B8E-741C-4BB4-8EF5-053428BE3CA7.jpg?v=1697910035",
+        "price": 35.00,
+        "category": "World"
+    },
+    {
+        "name": "Croazia",
+        "description": "Shirt Player Croazia Home Euro24",
+        "img": "https://goleadashop.com/wp-content/uploads/2024/06/Maglia-Croazia-Home-Euro-2024.jpg",
+        "price": 35.00,
+        "category": "World"
+    },
+    {
+        "name": "Spagna",
+        "description": "Shirt Player Spagna Home Euro24",
+        "img": "https://calcioitalia.com/media/cache/sylius_shop_product_large_thumbnail/0b/06/4715525d402bd011d3a98fbb3ca8.jpeg",
+        "price": 35.00,
+        "category": "World"
+    },
+    {
+        "name": "Fulminense",
+        "description": "Shirt Player Fulminense Home 23/24",
+        "img": "https://www.picclickimg.com/-L4AAOSwh~BlVRRU/Maglia-Fluminense-casa-home-23-24-finale-Copa-Libertadores.webp",
+        "price": 35.00,
+        "category": "World"
+    },
+    {
+        "name": "Al-Hilal",
+        "description": "Shirt Player Al-Hilal Away 23/24",
+        "img": "https://centrocamponegozio.com/cdn/shop/files/IMG-1372.jpg?v=1692215959",
+        "price": 35.00,
+        "category": "World"
     }
-    
+
 ]

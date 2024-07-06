@@ -27,18 +27,6 @@ public class Start implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-      /*  Utente admin = new Utente();
-        admin.setEmail("cesarano.fc@gmail.com");
-        admin.setPassword(passwordEncoder.encode("admin"));
-        admin.setNome("Felice");
-        admin.setCognome("Cesarano");
-        utenteRepository.save(admin);
 
-        Utente utente1 = new Utente();
-        utente1.setEmail("utente1@gmail.com");
-        utente1.setPassword(passwordEncoder.encode("password"));
-        utente1.setNome("Enzo");
-        utente1.setCognome("Cesarano");
-        utenteRepository.save(utente1);*/
     }
 }

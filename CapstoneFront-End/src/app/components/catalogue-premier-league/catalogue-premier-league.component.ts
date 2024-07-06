@@ -8,9 +8,9 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class CataloguePremierLeagueComponent implements OnInit{
   products: any[] = [];
-  selectedProduct: any = null; // per memorizzare il prodotto selezionato
-  selectedSize: string = ''; // per memorizzare la taglia selezionata
-  quantity: number = 1; // per memorizzare la quantità selezionata
+  selectedProduct: any = null; 
+  selectedSize: string = ''; 
+  quantity: number = 1; 
 
   constructor(
     private dataSrv: DataService,
@@ -24,8 +24,8 @@ export class CataloguePremierLeagueComponent implements OnInit{
   getProducts() {
     this.dataSrv.getProducts().subscribe(
       (data: any[]) => {
-        // Filtra i prodotti per la categoria "SerieA"
-        this.products = data.filter(product => product.category === 'SerieA');
+       
+        this.products = data.filter(product => product.category === 'PremierLeague');
       },
       error => {
         console.error('Errore durante il recupero dei prodotti', error);
@@ -34,7 +34,7 @@ export class CataloguePremierLeagueComponent implements OnInit{
   }
 
   openModal(product: any) {
-    this.selectedProduct = product; // Imposta il prodotto selezionato
+    this.selectedProduct = product; 
     const modal = document.getElementById('myModal');
     if (modal) {
       modal.classList.add('show');
@@ -51,18 +51,18 @@ export class CataloguePremierLeagueComponent implements OnInit{
       modal.style.display = 'none';
       modal.removeAttribute('aria-modal');
       modal.removeAttribute('role');
-      this.selectedProduct = null; // Resetta il prodotto selezionato quando si chiude la modale
-      this.selectedSize = ''; // Resetta la taglia selezionata
-      this.quantity = 1; // Resetta la quantità selezionata
+      this.selectedProduct = null; 
+      this.selectedSize = ''; 
+      this.quantity = 1; 
     }
   }
 
   addToCart() {
     if (this.selectedProduct && this.selectedSize && this.quantity > 0) {
-      // Calcola il prezzo totale
+     
       const totalPrice = this.selectedProduct.price * this.quantity;
 
-      // Aggiungi al carrello utilizzando il servizio CartService
+      
       const itemToAdd = {
         product: this.selectedProduct,
         size: this.selectedSize,
@@ -71,7 +71,7 @@ export class CataloguePremierLeagueComponent implements OnInit{
       };
       this.cartService.addToCart(itemToAdd);
 
-      // Chiudi la modale dopo l'aggiunta al carrello
+      
       this.closeModal();
     } else {
       alert('Seleziona taglia e quantità valide prima di aggiungere al carrello.');

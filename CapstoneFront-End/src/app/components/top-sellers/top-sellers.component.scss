@@ -18,9 +18,9 @@
     bottom: 10px; 
   }
 
-  .bgButton{
+  .bgButton, .taglia-btn.selected {
     background-color: #F65D21;
- }
+  }
 
  @media (max-width: 1200px) {
   .image-responsive {

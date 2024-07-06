@@ -6,107 +6,109 @@
                     <div class="row col-8 col-md-12 col-sm-12">
                         <div class="carousel-item active pe-0">
                             <div class="d-flex flex-row justify-content-center">
-                                <div class="card border-0 me-2 ms-4" style="width: 19.07rem;">
-                                    <div class="card-img-top-container">
-                                        <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                                            class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
-                                        <button type="button" class="btn bgButton text-white" (click)="openModal()">
-                                            Dai un occhiata
-                                        </button>
+                                <ng-container *ngFor="let product of products.slice(0, 3)">
+                                    <div class="card border-0 me-2 ms-4" style="width: 19.07rem;">
+                                        <div class="card-img-top-container">
+                                            <img [src]="product.img" class="card-img-top border rounded-4 shadow-sm"
+                                                [alt]="product.name">
+                                            <button type="button" class="btn bgButton text-white"
+                                                (click)="openModal(product)">
+                                                Dai un'occhiata
+                                            </button>
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <h6 class="card-text">{{ product.name }}</h6>
+                                            <p class="m-0">{{ product.description }}</p>
+                                            <p class="fw-semibold">{{ product.price }} €</p>
+                                        </div>
                                     </div>
-                                    <div class="card-body text-center">
-                                        <h6 class="card-text">BOCA JUNIORS</h6>
-                                        <p class="m-0">Shirt Player Boca Juniors 96/97</p>
-                                        <p class="fw-semibold">€35,00</p>
-                                    </div>
-                                </div>
-                                <div class="card border-0 mx-2" style="width: 19.07rem;">
-                                    <div class="card-img-top-container">
-                                        <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                                            class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
-                                        <button type="button" class="btn bgButton text-white" (click)="openModal()">
-                                            Dai un occhiata
-                                        </button>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h6 class="card-text">BOCA JUNIORS</h6>
-                                        <p class="m-0">Shirt Player Boca Juniors 96/97</p>
-                                        <p class="fw-semibold">€35,00</p>
-                                    </div>
-                                </div>
-                                <div class="card border-0 mx-2" style="width: 19.07rem;">
-                                    <div class="card-img-top-container">
-                                        <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                                            class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
-                                        <button type="button" class="btn bgButton text-white" (click)="openModal()">
-                                            Dai un occhiata
-                                        </button>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h6 class="card-text">BOCA JUNIORS</h6>
-                                        <p class="m-0">Shirt Player Boca Juniors 96/97</p>
-                                        <p class="fw-semibold">€35,00</p>
-                                    </div>
-                                </div>
+                                </ng-container>
                             </div>
                         </div>
                         <div class="carousel-item pe-0">
                             <div class="d-flex flex-row justify-content-center">
-                                <div class="card border-0 me-2 ms-4" style="width: 19.07rem;">
-                                    <div class="card-img-top-container">
-                                        <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                                            class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
-                                        <button type="button" class="btn bgButton text-white" (click)="openModal()">
-                                            Dai un occhiata
-                                        </button>
+                                <ng-container *ngFor="let product of products.slice(3, 6)">
+                                    <div class="card border-0 me-2 ms-4" style="width: 19.07rem;">
+                                        <div class="card-img-top-container">
+                                            <img [src]="product.img" class="card-img-top border rounded-4 shadow-sm"
+                                                [alt]="product.name">
+                                            <button type="button" class="btn bgButton text-white"
+                                                (click)="openModal(product)">
+                                                Dai un'occhiata
+                                            </button>
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <h6 class="card-text">{{ product.name }}</h6>
+                                            <p class="m-0">{{ product.description }}</p>
+                                            <p class="fw-semibold">{{ product.price }} €</p>
+                                        </div>
                                     </div>
-                                    <div class="card-body text-center">
-                                        <h6 class="card-text">BOCA JUNIORS</h6>
-                                        <p class="m-0">Shirt Player Boca Juniors 96/97</p>
-                                        <p class="fw-semibold">€35,00</p>
-                                    </div>
-                                </div>
-                                <div class="card border-0 mx-2" style="width: 19.07rem;">
-                                    <div class="card-img-top-container">
-                                        <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                                            class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
-                                        <button type="button" class="btn bgButton text-white" (click)="openModal()">
-                                            Dai un occhiata
-                                        </button>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h6 class="card-text">BOCA JUNIORS</h6>
-                                        <p class="m-0">Shirt Player Boca Juniors 96/97</p>
-                                        <p class="fw-semibold">€35,00</p>
-                                    </div>
-                                </div>
-                                <div class="card border-0 mx-2" style="width: 19.07rem;">
-                                    <div class="card-img-top-container">
-                                        <img src="https://outletdelcalcio.eu/cdn/shop/files/2_aa85f991-a063-4731-989f-577fcdce174e.png?v=1715593298"
-                                            class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
-                                        <button type="button" class="btn bgButton text-white" (click)="openModal()">
-                                            Dai un occhiata
-                                        </button>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h6 class="card-text">BOCA JUNIORS</h6>
-                                        <p class="m-0">Shirt Player Boca Juniors 96/97</p>
-                                        <p class="fw-semibold">€35,00</p>
-                                    </div>
-                                </div>
+                                </ng-container>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev justify-content-start pb-5" type="button" data-bs-target=".carousel" data-bs-slide="prev">
+            <button class="carousel-control-prev justify-content-start pb-5" type="button" data-bs-target=".carousel"
+                data-bs-slide="prev">
                 <i class="bi bi-arrow-left-circle-fill fs-2 mb-5" aria-hidden="true"></i>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next justify-content-end pb-5" type="button" data-bs-target=".carousel" data-bs-slide="next">
+            <button class="carousel-control-next justify-content-end pb-5" type="button" data-bs-target=".carousel"
+                data-bs-slide="next">
                 <i class="bi bi-arrow-right-circle-fill fs-2 mb-5" aria-hidden="true"></i>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </ng-container>
-</div> 
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Dettagli del prodotto</h5>
+                <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngIf="selectedProduct">
+                <div class="text-center">
+                    <img [src]="selectedProduct.img" class="w-75 image-responsive" [alt]="selectedProduct.name">
+                </div>
+                <h6 class="card-text mt-3">{{ selectedProduct.name }}</h6>
+                <p>{{ selectedProduct.description }}</p>
+                <p class="fw-semibold">{{ selectedProduct.price }} €</p>
+
+                <div class="ms-2">
+                    <div>
+                        <h6>Taglie Disponibili</h6>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
+                            [ngClass]="{'selected': selectedSize === 'S'}" (click)="selectSize('S')">S</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
+                            [ngClass]="{'selected': selectedSize === 'M'}" (click)="selectSize('M')">M</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
+                            [ngClass]="{'selected': selectedSize === 'L'}" (click)="selectSize('L')">L</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
+                            [ngClass]="{'selected': selectedSize === 'XL'}" (click)="selectSize('XL')">XL</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
+                            [ngClass]="{'selected': selectedSize === 'XXL'}" (click)="selectSize('XXL')">XXL</button>
+                    </div>
+                    <div class="col-3">
+                        <h6>Quantità:</h6>
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button" (click)="quantity = quantity - 1"
+                                [disabled]="quantity === 1">-</button>
+                            <input type="number" class="form-control text-center p-0" [(ngModel)]="quantity"
+                                id="quantita" min="1">
+                            <button class="btn btn-outline-secondary" type="button"
+                                (click)="quantity = quantity + 1">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer mt-2">
+                <button type="button" class="btn bgButton text-white" (click)="addToCart()">Aggiungi al
+                    carrello</button>
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Chiudi</button>
+            </div>
+        </div>
+    </div>
+</div>

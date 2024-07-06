@@ -3,11 +3,11 @@ import { DataService } from 'src/app/service/data.service';
 import { CartService } from 'src/app/service/cart.service';
 
 @Component({
-  selector: 'app-catalogue-serie-a',
-  templateUrl: './catalogue-serie-a.component.html',
-  styleUrls: ['./catalogue-serie-a.component.scss']
+  selector: 'app-catalogue-vintage',
+  templateUrl: './catalogue-vintage.component.html',
+  styleUrls: ['./catalogue-vintage.component.scss']
 })
-export class CatalogueSerieAComponent implements OnInit {
+export class CatalogueVintageComponent implements OnInit{
   products: any[] = [];
   selectedProduct: any = null; 
   selectedSize: string = ''; 
@@ -26,7 +26,7 @@ export class CatalogueSerieAComponent implements OnInit {
     this.dataSrv.getProducts().subscribe(
       (data: any[]) => {
         
-        this.products = data.filter(product => product.category === 'SerieA');
+        this.products = data.filter(product => product.category === 'Vintage');
       },
       error => {
         console.error('Errore durante il recupero dei prodotti', error);

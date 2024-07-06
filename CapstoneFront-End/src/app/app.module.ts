@@ -24,7 +24,6 @@ import { CataloguePremierLeagueComponent } from './components/catalogue-premier-
 import { CatalogueLigue1Component } from './components/catalogue-ligue1/catalogue-ligue1.component';
 import { CatalogueLaLigaComponent } from './components/catalogue-la-liga/catalogue-la-liga.component';
 import { CatalogueBundesligaComponent } from './components/catalogue-bundesliga/catalogue-bundesliga.component';
-import { CatalogueRetroComponent } from './components/catalogue-retro/catalogue-retro.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { TokenInterceptor } from './auth/token.interceptor';
 import { AuthService } from './auth/auth.service';
@@ -34,6 +33,8 @@ import { AllProductComponent } from './components/all-product/all-product.compon
 import { AllUserComponent } from './components/all-user/all-user.component';
 import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
 import { PaymentCancelComponent } from './components/payment-cancel/payment-cancel.component';
+import { CatalogueVintageComponent } from './components/catalogue-vintage/catalogue-vintage.component';
+import { CatalogueWorldComponent } from './components/catalogue-world/catalogue-world.component';
 
 
 
@@ -72,8 +73,12 @@ const routes: Route[] = [
     component: CatalogueBundesligaComponent,
   },
   {
-    path: 'retro',
-    component: CatalogueRetroComponent,
+    path: 'vintage',
+    component: CatalogueVintageComponent,
+  },
+  {
+    path: 'world',
+    component: CatalogueWorldComponent,
   },
   {
     path: 'account',
@@ -109,7 +114,6 @@ const routes: Route[] = [
     CatalogueLigue1Component,
     CatalogueLaLigaComponent,
     CatalogueBundesligaComponent,
-    CatalogueRetroComponent,
     CarouselComponent,
     AccountComponent,
     AddProductComponent,
@@ -117,6 +121,8 @@ const routes: Route[] = [
     AllUserComponent,
     PaymentSuccessComponent,
     PaymentCancelComponent,
+    CatalogueVintageComponent,
+    CatalogueWorldComponent,
   ],
   imports: [
     BrowserModule,
