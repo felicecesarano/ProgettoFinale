@@ -1,0 +1,33 @@
+
+  
+  .card {
+    transition: all 0.3s ease;
+    border-radius: 8px; /* Raggio del bordo per un look più arrotondato */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Bordo sottile per migliorare la visibilità */
+    width: 18rem; /* Larghezza della card ridotta */
+  }
+  
+  .card-body {
+    padding: 1rem; /* Padding interno ridotto */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Dimensione del titolo ridotta */
+    font-weight: bold;
+    color: #333; /* Colore del testo scuro */
+  }
+  
+  .card-text {
+    margin-bottom: 0.5rem;
+    color: #666; /* Colore del testo leggermente più scuro */
+  }
+  
+  .bgButton {
+    background-color: #F65D21;
+  }
+  
+  .text-center {
+    margin-bottom: 2rem; /* Aumentato per migliorare la spaziatura */
+  }
+  

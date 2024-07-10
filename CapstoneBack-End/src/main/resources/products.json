@@ -72,14 +72,14 @@
     {
         "name": "Milan",
         "description": "Shirt Player Milan Home 23/24",
-        "img": "https://store.acmilan.com/cdn/shop/products/770382-A81_01.jpg?v=1691995257",
+        "img": "https://outletdelcalcio.eu/cdn/shop/files/1_8b5727ad-1789-4263-a3d5-a2258ad910c0.png?v=1685959173",
         "price": 30.00,
         "category": "SerieA"
     },
     {
         "name": "Milan",
         "description": "Shirt Player Milan Away 23/24",
-        "img": "https://store.acmilan.com/cdn/shop/products/770391-A83_01_e7098085-66f2-4215-ad04-e3a933884d06.jpg?v=1691999010",
+        "img": "https://cdn.0brandcommerce.com/110659_L.jpg",
         "price": 30.00,
         "category": "SerieA"
     },
@@ -105,6 +105,13 @@
         "category": "SerieA"
     },
     {
+        "name": "Napoli",
+        "description": "Shirt Player Napoli Halloween 23/24",
+        "img": "https://cf.bestsoccerstore.com.cn/upload/ttmall/img/20231017/5baced48a5304bc837d9de5b940ba6c3.png=z-780,780_f-webp",
+        "price": 30.00,
+        "category": "SerieA"
+    },
+    {
         "name": "Roma",
         "description": "Shirt Player Roma Home 23/24",
         "img": "https://labottegadelcalcio.com/cdn/shop/files/home_jers_1.webp?v=1698314481",
@@ -112,16 +119,9 @@
         "category": "SerieA"
     },
     {
-        "name": "Roma",
-        "description": "Shirt Player Roma Away 23/24",
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/93c4959b26914d9586658ebf0cc5f15d_9366/Maglia_Away_23-24_Junior_AS_Roma_Beige_IK7161_01_laydown.jpg",
-        "price": 30.00,
-        "category": "SerieA"
-    },
-    {
         "name": "Torino",
         "description": "Shirt Player Torino Home 23/24",
-        "img": "https://torinofcstore.com/modules/ets_megamenu/views/img/upload/maglia-home-menu.png",
+        "img": "https://www.tradeinn.com/f/14017/140170089/joma-maglietta-a-maniche-corte-home-torino-23-24.jpg",
         "price": 30.00,
         "category": "SerieA"
     },
@@ -142,28 +142,28 @@
     {
         "name": "Manchester United",
         "description": "Shirt Player Man United Home 23/24",
-        "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/fe0ce38456ab4ad2871bafc400cca89d_9366/Maglia_Home_23-24_Junior_Manchester_United_FC_Rosso_IP1736_01_laydown.jpg",
+        "img": "https://thepitchfootball.com/images/thepitch/products/large/IP1726.webp",
         "price": 30.00,
         "category": "PremierLeague"
     },
     {
-        "name": "Manchester United",
-        "description": "Shirt Player Man United Away 23/24",
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/68d43873d276496cb59b1585cbe3c19a_9366/Maglia_Away_23-24_Junior_Manchester_United_FC_Verde_IA7195_01_laydown.jpg",
+        "name": "Chelsea",
+        "description": "Shirt Player Chelsea Home 23/24",
+        "img": "https://images.footballfanatics.com/chelsea/chelsea-home-stadium-sponsored-shirt-2023-24-with-gallagher-23-printing_ss5_p-200745027+pv-2+u-3c3qyfbzengaeyk4p2b8+v-krj45o6wrvfcns0phulp.jpg?_hv=2&w=900",
         "price": 30.00,
         "category": "PremierLeague"
     },
     {
         "name": "Arsenal",
         "description": "Shirt Player Arsenal Home 23/24",
-        "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/86cf0b5f4d894aa89d4dafcc00ab552c_9366/Maglia_Home_23-24_Arsenal_FC_Rosso_HZ2133_01_laydown.jpg",
+        "img": "https://thepitchfootball.com/images/thepitch/products/large/HR6929.webp",
         "price": 30.00,
         "category": "PremierLeague"
     },
     {
-        "name": "Arsenal",
-        "description": "Shirt Player Arsenal Away 23/24",
-        "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/9e30161f6f37431288e35c06b811f77a_9366/Maglia_Away_23-24_Arsenal_FC_Giallo_HZ2106_01_laydown.jpg",
+        "name": "Chelsea",
+        "description": "Shirt Player Chelsea Away 23/24",
+        "img": "https://static.nike.com/a/images/t_default/545d8181-1b4d-4244-8965-a868c16a2a68/maglia-da-calcio-dri-fit-chelsea-fc-2023-24-stadium-per-a-away-bfGPc7.png",
         "price": 30.00,
         "category": "PremierLeague"
     },
@@ -219,7 +219,7 @@
     {
         "name": "Real Madrid",
         "description": "Shirt Player Real Madrid Away 23/24",
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/79792eebdc93491ca4cb54dd0df1e469_9366/Maglia_Away_23-24_Kids_Real_Madrid_Blu_IB0000_01_laydown.jpg",
+        "img": "https://www.kitroomstore.com/wp-content/uploads/2023/10/1000252.png",
         "price": 30.00,
         "category": "LaLiga"
     },
@@ -233,7 +233,7 @@
     {
         "name": "Barcellona",
         "description": "Shirt Player Barcellona Away 23/24",
-        "img": "https://img01.ztat.net/article/spp-media-p1/22cfbefdbd404a47861166f3f7952bcd/7eb824875ecb42a3b149c275846f5c8e.jpg?imwidth=156&filter=packshot",
+        "img": "https://thepitchfootball.com/images/thepitch/products/large/DX2686101.webp",
         "price": 30.00,
         "category": "LaLiga"
     },
@@ -245,9 +245,9 @@
         "category": "LaLiga"
     },
     {
-        "name": "Atletico Madrid",
-        "description": "Shirt Player Atletico Madrid Away 23/24",
-        "img": "https://i.ebayimg.com/images/g/FH0AAOSw1OVk~M2q/s-l1600.jpg",
+        "name": "Villareal",
+        "description": "Shirt Player Villareal Home 23/24",
+        "img": "https://www.lacampionessa.com/37373-thickbox_default/2023-24-villarreal-cf-maglia-home-shirt-joma.jpg",
         "price": 30.00,
         "category": "LaLiga"
     },
@@ -268,14 +268,14 @@
     {
         "name": "Borussia Dortmund",
         "description": "Shirt Player Borussia Dortmund Home 23/24",
-        "img": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/770603/01/fnd/EEA/fmt/png/Maglia-gara-Home-Borussia-Dortmund-Authentic-23/24-da-uomog",
+        "img": "https://thepitchfootball.com/images/thepitch/products/large/77060301.webp",
         "price": 30.00,
         "category": "Bundesliga"
     },
     {
         "name": "Borussia Dortmund",
         "description": "Shirt Player Borussia Dortmund Away 23/24",
-        "img": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/770612/02/fnd/EEA/fmt/png/Maglia-gara-Away-Borussia-Dortmund-23/24-da-uomo",
+        "img": "https://images.tcdn.com.br/img/img_prod/694710/camisa_borussia_dortmund_2024_camisa_ii_11841_1_861484ce4a57c22a1247ad1de895d261.jpg",
         "price": 30.00,
         "category": "Bundesliga"
     },
@@ -338,7 +338,7 @@
     {
         "name": "Inter Miami",
         "description": "Shirt Player Inter Miami Away 23/24",
-        "img": "https://outletdelcalcio.eu/cdn/shop/files/1_e4c43116-20b1-471a-8174-155dea2351d3.png?v=1691602858",
+        "img": "https://soccerworld.com.au/cdn/shop/files/Inter_Miami_CF_23-24_Away_Authentic_Jersey_Black_IS4874_01_laydownBackgroundRemoved.png?v=1706237443",
         "price": 35.00,
         "category": "World"
     },
@@ -366,7 +366,7 @@
     {
         "name": "Fulminense",
         "description": "Shirt Player Fulminense Home 23/24",
-        "img": "https://www.picclickimg.com/-L4AAOSwh~BlVRRU/Maglia-Fluminense-casa-home-23-24-finale-Copa-Libertadores.webp",
+        "img": "https://www.gogoalshopcloud.com/upload/ttmall/img/20220630/585de8580cd9d867ed423e72b57677de.png=z-621,621_f-webp",
         "price": 35.00,
         "category": "World"
     },

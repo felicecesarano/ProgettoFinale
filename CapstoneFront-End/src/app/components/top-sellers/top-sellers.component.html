@@ -1,13 +1,12 @@
 <div class="container-fluid p-5 pb-0 mb-5">
     <div class="text-center mb-5">
-<h4>Le più richieste</h4>
+        <h4>Le più richieste</h4>
     </div>
     <div class="row d-none d-xxl-flex">
-        <ng-container  *ngFor="let product of randomProducts">
+        <ng-container *ngFor="let product of randomProducts">
             <div class="card border-0" style="width: 19.07rem;">
                 <div class="card-img-top-container">
-                    <img [src]="product.img"
-                        class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
+                    <img [src]="product.img" class="card-img-top border rounded-4 shadow-sm" alt="Boca Retro">
                     <button type="button" class="btn bgButton text-white" (click)="openModal(product)">
                         Dai un occhiata
                     </button>
@@ -23,7 +22,7 @@
     <app-carousel [products]="randomProducts" class="d-xxl-none"></app-carousel>
 </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" [ngClass]="{'show': selectedProduct !== null}" [ngStyle]="{'display': selectedProduct ? 'block' : 'none'}" aria-modal="true" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -41,25 +40,18 @@
                 <div class="ms-2">
                     <div>
                         <h6>Taglie Disponibili</h6>
-                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                            [ngClass]="{'selected': selectedSize === 'S'}" (click)="selectSize('S')">S</button>
-                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                            [ngClass]="{'selected': selectedSize === 'M'}" (click)="selectSize('M')">M</button>
-                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                            [ngClass]="{'selected': selectedSize === 'L'}" (click)="selectSize('L')">L</button>
-                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                            [ngClass]="{'selected': selectedSize === 'XL'}" (click)="selectSize('XL')">XL</button>
-                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2"
-                            [ngClass]="{'selected': selectedSize === 'XXL'}" (click)="selectSize('XXL')">XXL</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2" [ngClass]="{'selected': selectedSize === 'S'}" (click)="selectSize('S')">S</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2" [ngClass]="{'selected': selectedSize === 'M'}" (click)="selectSize('M')">M</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2" [ngClass]="{'selected': selectedSize === 'L'}" (click)="selectSize('L')">L</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2" [ngClass]="{'selected': selectedSize === 'XL'}" (click)="selectSize('XL')">XL</button>
+                        <button type="button" class="btn btn-outline-secondary taglia-btn me-3 px-4 mb-2" [ngClass]="{'selected': selectedSize === 'XXL'}" (click)="selectSize('XXL')">XXL</button>
                     </div>
                     <div class="col-3">
                         <h6>Quantità:</h6>
                         <div class="input-group">
-                            <button class="btn btn-outline-secondary" type="button" (click)="quantity = quantity - 1"
-                                [disabled]="quantity === 1">-</button>
-                            <input type="number" class="form-control text-center p-0" [(ngModel)]="quantity" id="quantita"
-                                min="1">
-                            <button class="btn btn-outline-secondary" type="button" (click)="quantity = quantity + 1">+</button>
+                            <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity()" [disabled]="quantity === 1">-</button>
+                            <input type="number" class="form-control text-center p-0" [(ngModel)]="quantity" id="quantita" min="1">
+                            <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity()">+</button>
                         </div>
                     </div>
                 </div>

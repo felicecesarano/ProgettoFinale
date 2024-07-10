@@ -1,0 +1,25 @@
+<div class="container-fluid m-0 px-5 my-5">
+  <h2 class="text-center">I Miei Ordini</h2>
+    <div class="row">
+      <!-- Loop per ogni ordine -->
+      <div class="col-md-2 mb-4" *ngFor="let order of orders">
+        <div class="card border-0 shadow-sm custom-card">
+          <div class="card-body">
+            <h5 class="card-title">Ordine ID: {{ order.id }}</h5>
+            <p class="card-text"><strong>ID Prodotto:</strong> {{ order.productId }}</p>
+            <p class="card-text"><strong>Taglia:</strong> {{ order.size }}</p>
+            <p class="card-text"><strong>Quantità:</strong> {{ order.quantity }}</p>
+            <p class="card-text"><strong>Importo Totale:</strong> {{ order.totalAmount | number:'1.2-2' }} €</p>
+            <p class="card-text"><strong>Stato:</strong> {{ order.status }} <i class="bi bi-check-circle-fill text-success" *ngIf="order.status === 'Spedito'"></i></p>
+           
+          </div>
+        </div>
+      </div>
+  
+      <!-- Se non ci sono ordini -->
+      <div class="col-md-6 text-center" *ngIf="orders.length === 0">
+        <p>Non hai ancora effettuato nessun ordine</p>
+        <button type="button" class="btn bgButton text-white" [routerLink]="['/']">INIZIA A FARE ACQUISTI</button>
+      </div>
+    </div>
+  </div>

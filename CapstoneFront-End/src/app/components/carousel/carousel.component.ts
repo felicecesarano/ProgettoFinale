@@ -7,8 +7,7 @@ import { CartService } from 'src/app/service/cart.service';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-  @Input() products: any[] = []; // Input per ricevere i prodotti
-
+  @Input() products: any[] = []; 
   selectedProduct: any = null;
   selectedSize: string = '';
   quantity: number = 1;

@@ -1,0 +1,38 @@
+<div class="container my-5">
+    <h2 class="text-center">Tutti gli Ordini</h2>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID Ordine</th>
+          <th>ID Cliente</th>
+          <th>ID Prodotto</th>
+          <th>Taglia</th>
+          <th>Quantità</th>
+          <th>Importo Totale</th>
+          <th>Stato</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.customerId }}</td>
+          <td>{{ order.productId }}</td>
+          <td>{{ order.size }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.totalAmount | number:'1.2-2' }} €</td>
+          <td>{{ order.status }}</td>
+          <td>
+            <div class="btn-group">
+              <button class="btn btn-airplane btn-sm" *ngIf="order.status !== 'Spedito'" (click)="updateOrderStatus(order.id, 'Spedito')">
+                <i class="bi bi-airplane-fill"></i>
+              </button>
+              <i class="bi bi-check-circle-fill text-success" *ngIf="isShipped(order.status)"></i>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

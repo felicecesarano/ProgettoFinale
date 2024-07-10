@@ -1,7 +1,7 @@
 <div class="container-fluid p-0">
   <ul class="navbar-nav flex-row justify-content-center p-2 border-bottom">
     <li class="nav-item me-3 fs-5" (click)="setActiveView('orders')">
-      Ordini
+     Ordini
     </li>
     <li *ngIf="isAdmin" class="nav-item dropdown fs-5 me-3">
       <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -9,8 +9,9 @@
       </a>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" (click)="setActiveView('addProduct')">Aggiungi Prodotto</a></li>
-        <li><a class="dropdown-item" (click)="setActiveView('allProducts')">Tutti i prodotti</a></li>
-        <li><a class="dropdown-item" (click)="setActiveView('allUsers')">Tutti gli utenti</a></li>
+        <li><a class="dropdown-item" (click)="setActiveView('allProducts')">Prodotti</a></li>
+        <li><a class="dropdown-item" (click)="setActiveView('allUsers')">Utenti</a></li>
+        <li><a class="dropdown-item" (click)="setActiveView('allOrders')">Ordini</a></li>
       </ul>
     </li>
     <li class="nav-item fs-5" (click)="logout()">
@@ -18,12 +19,11 @@
     </li>
   </ul>
 
-  <div *ngIf="showOrders" class="text-center mt-5">
-    <p>Non hai ancora effettuato nessun ordine</p>
-    <button type="button" class="btn bgButton text-white" [routerLink]="['/']">INIZIA A FARE ACQUISTI</button>
-  </div>
+  <app-order *ngIf="showOrders" class="text-center mt-5"></app-order>
+    
 
   <app-add-product *ngIf="showAddProduct"></app-add-product>
   <app-all-product *ngIf="showAllProducts"></app-all-product>
   <app-all-user *ngIf="showAllUsers"></app-all-user>
+  <app-all-orders *ngIf="showAllOrders"></app-all-orders>
 </div>

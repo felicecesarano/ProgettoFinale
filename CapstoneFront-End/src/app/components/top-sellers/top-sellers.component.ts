@@ -1,6 +1,7 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/service/data.service';
 import { CartService } from 'src/app/service/cart.service';
+
 @Component({
   selector: 'app-top-sellers',
   templateUrl: './top-sellers.component.html',
@@ -11,7 +12,6 @@ export class TopSellersComponent implements OnInit {
   selectedProduct: any = null;
   selectedSize: string = '';
   quantity: number = 1;
-  screenWidth: number = window.innerWidth;
 
   constructor(private dataSrv: DataService, private cartService: CartService) { }
 
@@ -35,10 +35,28 @@ export class TopSellersComponent implements OnInit {
     return shuffled.slice(0, count);
   }
 
-  selectProduct(product: any) {
+  openModal(product: any) {
     this.selectedProduct = product;
+  }
+
+  closeModal() {
+    this.selectedProduct = null;
     this.selectedSize = '';
     this.quantity = 1;
+  }
+
+  selectSize(size: string) {
+    this.selectedSize = size;
+  }
+
+  decrementQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
+  }
+
+  incrementQuantity() {
+    this.quantity++;
   }
 
   addToCart() {
@@ -54,45 +72,5 @@ export class TopSellersComponent implements OnInit {
     } else {
       alert('Seleziona prodotto, taglia e quantità valide prima di aggiungere al carrello.');
     }
-  }
-  openModal(product: any) {
-    this.selectedProduct = product; 
-    const modal = document.getElementById('myModal');
-    if (modal) {
-      modal.classList.add('show');
-      modal.style.display = 'block';
-      modal.setAttribute('aria-modal', 'true');
-      modal.setAttribute('role', 'dialog');
-    }
-  }
-
-  closeModal() {
-    const modal = document.getElementById('myModal');
-    if (modal) {
-      modal.classList.remove('show');
-      modal.style.display = 'none';
-      modal.removeAttribute('aria-modal');
-      modal.removeAttribute('role');
-      this.selectedProduct = null; 
-      this.selectedSize = ''; 
-      this.quantity = 1; 
-    }
-  }
-  selectSize(size: string) {
-    this.selectedSize = size;
-  }
-
-  decrementQuantity() {
-    if (this.quantity > 1) {
-      this.quantity--;
-    }
-  }
-
-  incrementQuantity() {
-    this.quantity++;
-  }
-
-  isSelectedProduct(product: any): boolean {
-    return this.selectedProduct === product;
   }
 }

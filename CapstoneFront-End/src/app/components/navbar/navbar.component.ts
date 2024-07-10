@@ -81,7 +81,7 @@ export class NavbarComponent implements OnInit {
   
     const customerId = this.authService.getUserId();
     const paymentDtos = this.cartItems.map(item => ({
-      amount: item.product.price,
+      amount: item.product.price * item.quantity,
       customerId: customerId,
       productId: item.product.id,
       size: item.size,

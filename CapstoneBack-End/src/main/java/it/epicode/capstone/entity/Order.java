@@ -22,4 +22,10 @@ public class Order {
     private Integer quantity;
 
     private Long totalAmount;
+
+    private String status = "Non spedito";
+
+    public void updateStatus(String newStatus) {
+        this.status = newStatus;
+    }
 }

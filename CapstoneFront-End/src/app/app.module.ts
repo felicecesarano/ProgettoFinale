@@ -35,6 +35,8 @@ import { PaymentSuccessComponent } from './components/payment-success/payment-su
 import { PaymentCancelComponent } from './components/payment-cancel/payment-cancel.component';
 import { CatalogueVintageComponent } from './components/catalogue-vintage/catalogue-vintage.component';
 import { CatalogueWorldComponent } from './components/catalogue-world/catalogue-world.component';
+import { AllOrdersComponent } from './components/all-orders/all-orders.component';
+import { OrderComponent } from './components/order/order.component';
 
 
 
@@ -123,6 +125,8 @@ const routes: Route[] = [
     PaymentCancelComponent,
     CatalogueVintageComponent,
     CatalogueWorldComponent,
+    AllOrdersComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,

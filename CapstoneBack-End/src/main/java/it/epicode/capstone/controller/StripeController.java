@@ -17,10 +17,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/api")
@@ -45,19 +42,22 @@ public class StripeController {
             Stripe.apiKey = stripeSecretKey;
 
             List<SessionCreateParams.LineItem> lineItems = new ArrayList<>();
-            Map<String, String> metadata = new HashMap<>();  // Usiamo Map<String, String> invece di Map<String, Object>
+            Map<String, String> metadata = new HashMap<>();
 
             for (PaymentDto paymentDto : paymentDtos) {
                 metadata.put("customerId", String.valueOf(paymentDto.getCustomerId()));
                 metadata.put("productId", String.valueOf(paymentDto.getProductId()));
                 metadata.put("size", paymentDto.getSize());
                 metadata.put("quantity", String.valueOf(paymentDto.getQuantity()));
-                metadata.put("totalAmount", String.valueOf(paymentDto.getAmount()));
+                metadata.put("totalAmount", String.valueOf(paymentDto.getAmount())) ;
+
+                // Calcolo del prezzo unitario
+                Long unitAmount = paymentDto.getAmount() / paymentDto.getQuantity() * 100;
 
                 SessionCreateParams.LineItem.PriceData priceData =
                         SessionCreateParams.LineItem.PriceData.builder()
                                 .setCurrency("eur")
-                                .setUnitAmount(paymentDto.getAmount())
+                                .setUnitAmount(unitAmount)
                                 .setProductData(
                                         SessionCreateParams.LineItem.PriceData.ProductData.builder()
                                                 .setName("Product")
@@ -79,8 +79,8 @@ public class StripeController {
                             .addAllLineItem(lineItems)
                             .setMode(SessionCreateParams.Mode.PAYMENT)
                             .putAllMetadata(metadata)
-                            .setSuccessUrl("http://localhost:4200/success")
-                            .setCancelUrl("http://localhost:4200/cancel")
+                            .setSuccessUrl("http://localhost:4200/")
+                            .setCancelUrl("http://localhost:4200/")
                             .build();
 
             // Creazione della sessione di checkout
@@ -92,6 +92,7 @@ public class StripeController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+
 
 
 
@@ -141,5 +142,39 @@ public class StripeController {
         } catch (NumberFormatException e) {
             System.err.println("Error parsing metadata: " + e.getMessage());
         }
+    }
+
+    @GetMapping("/orders")
+    public ResponseEntity<List<Order>> getAllOrders() {
+        List<Order> orders = orderService.getAllOrders();
+        return ResponseEntity.ok(orders);
+    }
+    @PutMapping("/orders/{orderId}/status")
+    public ResponseEntity<?> updateOrderStatus(@PathVariable Long orderId, @RequestBody String newStatus) {
+        try {
+            Optional<Order> optionalOrder = orderService.getOrderById(orderId);
+
+            if (optionalOrder.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+
+            // Ottieni l'ordine se presente nell'Optional
+            Order order = optionalOrder.get();
+
+            // Imposta il nuovo stato dell'ordine
+            order.setStatus(newStatus);
+
+            // Salva l'ordine aggiornato nel database
+            orderService.saveOrder(order);
+
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error updating order status: " + e.getMessage());
+        }
+    }
+    @GetMapping("/orders/user/{userId}")
+    public ResponseEntity<List<Order>> getOrdersByUserId(@PathVariable Long userId) {
+        List<Order> orders = orderService.getOrdersByUserId(userId);
+        return ResponseEntity.ok(orders);
     }
 }
